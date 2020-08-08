@@ -15,6 +15,7 @@ let routes = [
    { path: "menu", component: MenuComponent },
     { path: "signup", component: SignupComponent },
     { path: "home", component: HomeComponent },
+     { path: "login", component: LoginComponent }
     
    
 ];
