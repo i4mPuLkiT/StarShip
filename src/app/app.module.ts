@@ -9,7 +9,6 @@ import { HomeComponent } from './home/home.component';
 import { MenuComponent } from './menu/menu.component';
 import { LoginComponent } from './login/login.component';
 import { LayoutComponent } from './layout/layout.component';
-
 let routes = [
   { path: "", component: LayoutComponent },
    { path: "menu", component: MenuComponent },
@@ -32,4 +31,5 @@ let routes = [
   declarations: [ AppComponent, HelloComponent, SignupComponent, HomeComponent, MenuComponent, LoginComponent, LayoutComponent,   ],
   bootstrap:    [ AppComponent ]
 })
-export class AppModule { }
+export class AppModule {
+ }
