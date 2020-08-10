@@ -1,5 +1,5 @@
 .form_bg{
-    background: linear-gradient(to bottom,#00ff90,#808080);
+    background: linear-gradient(to bottom,#4e73df,#808080);
     height: 100vh;
     display: flex;
     align-items: center;
@@ -17,7 +17,7 @@
 
 
     .form_horizontal .btn {
-        color: cadetblue;
+        color: rgb(103, 123, 124);
         background-color: lightgrey;
         font-size: 15px;
         font-weight: 600;
