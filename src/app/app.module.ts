@@ -10,12 +10,15 @@ import { MenuComponent } from './menu/menu.component';
 import { LoginComponent } from './login/login.component';
 import { LayoutComponent } from './layout/layout.component';
 import { AccountmanagerComponent } from './accountmanager/accountmanager.component';
+
+
 let routes = [
   { path: "", component: LayoutComponent },
    { path: "menu", component: MenuComponent },
     { path: "signup", component: SignupComponent },
     { path: "home", component: HomeComponent },
-     { path: "login", component: LoginComponent }
+     { path: "login", component: LoginComponent },
+     { path: "accountmanager", component: AccountmanagerComponent }
     
    
 ];
