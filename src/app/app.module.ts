@@ -9,6 +9,7 @@ import { HomeComponent } from './home/home.component';
 import { MenuComponent } from './menu/menu.component';
 import { LoginComponent } from './login/login.component';
 import { LayoutComponent } from './layout/layout.component';
+import { AccountmanagerComponent } from './accountmanager/accountmanager.component';
 let routes = [
   { path: "", component: LayoutComponent },
    { path: "menu", component: MenuComponent },
@@ -28,7 +29,7 @@ let routes = [
       })
 
    ],
-  declarations: [ AppComponent, HelloComponent, SignupComponent, HomeComponent, MenuComponent, LoginComponent, LayoutComponent,   ],
+  declarations: [ AppComponent, HelloComponent, SignupComponent, HomeComponent, MenuComponent, LoginComponent, LayoutComponent, AccountmanagerComponent,   ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule {
