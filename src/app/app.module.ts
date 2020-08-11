@@ -20,7 +20,9 @@ let routes = [
     { path: "signup", component: SignupComponent },
     { path: "home", component: HomeComponent },
      { path: "login", component: LoginComponent },
-     { path: "accountmanager", component: AccountmanagerComponent }
+     { path: "accountmanager", component: AccountmanagerComponent },
+     { path: "forgotpassword", component: ForgotpasswordComponent },
+     { path: "tables", component: TablesComponent },
     
    
 ];
