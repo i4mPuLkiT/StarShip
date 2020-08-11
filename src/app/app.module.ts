@@ -10,6 +10,8 @@ import { MenuComponent } from './menu/menu.component';
 import { LoginComponent } from './login/login.component';
 import { LayoutComponent } from './layout/layout.component';
 import { AccountmanagerComponent } from './accountmanager/accountmanager.component';
+import { ForgotpasswordComponent } from './forgotpassword/forgotpassword.component';
+import { TablesComponent } from './tables/tables.component';
 
 
 let routes = [
@@ -32,7 +34,7 @@ let routes = [
       })
 
    ],
-  declarations: [ AppComponent, HelloComponent, SignupComponent, HomeComponent, MenuComponent, LoginComponent, LayoutComponent, AccountmanagerComponent,   ],
+  declarations: [ AppComponent, HelloComponent, SignupComponent, HomeComponent, MenuComponent, LoginComponent, LayoutComponent, AccountmanagerComponent, ForgotpasswordComponent, TablesComponent,   ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule {
