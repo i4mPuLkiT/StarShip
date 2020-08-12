@@ -1,44 +1,41 @@
-.form_bg{
-    background:#4e73df;
-    height: 100vh;
-    display: flex;
-    align-items: center;
+
+/* set entire body that is webpage */
+body {
+    padding-top: 14vh;
+}
+/* set form background colour*/
+form {
+    background: #fff;
+}
+/* set padding and size of th form */
+.form-container {
+    border-radius: 10px;
+    padding: 30px;
 }
 
-.form_horizontal{
-    font-family:'lato',sans-serif;
+.bg-gradient-primary {
+    background-color: #4e73df;
+}
+
+.form-container .form_icon {
+    color: lightblue;
+    font-size: 100px;
     text-align: center;
 }
 
-.form_horizontal .form_icon{
-    color:black;
-    font-size: 100px;
+.btn-primary {
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    vertical-align: middle;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 1.35rem;
 }
 
-
-    .form_horizontal .btn {
-        color: rgb(103, 123, 124);
-        background-color: lightgrey;
-        font-size: 15px;
-        font-weight: 600;
-        letter-spacing: 1px;
-        width: 80%;
-        padding: 0 0 15px;
-        margin: 0 0 15px 0;
-        border: solid;
-        border-radius: 20px;
-        text-transform: uppercase;
-    }
-
-    .form_horizontal .form_control{
-        color: chocolate;
-        background-color: aquamarine;
-        font-size: 13px;
-        letter-spacing: 1px;
-        height: 37px;
-        padding: 2px 15px 2px 35px;
-        border: none;
-        border-radius: 50px;
-    }
-
-    
+.text-center{
+    color:black;
+}
