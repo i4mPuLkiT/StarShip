@@ -1,3 +1,19 @@
-<p>
-tables works!
-</p>
+<h1>Transactions</h1>
+<p *ngIf="!transactions"><em>Loading...</em></p>
+<table class='table'>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Debt</th>
+      <th>Credit</th>
+    </tr>
+  </thead>
+  <tbody *ngIf="transactions">
+    <tr *ngFor="let tran of transactions">
+      <td>{{ tran.name }}</td>
+      <td>{{ tran.dbt }}</td>
+      <td>{{ tran.crt }}</td>
+    </tr>
+  </tbody>
+</table>
+
