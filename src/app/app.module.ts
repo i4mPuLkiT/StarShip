@@ -12,10 +12,14 @@ import { LayoutComponent } from './layout/layout.component';
 import { AccountmanagerComponent } from './accountmanager/accountmanager.component';
 import { ForgotpasswordComponent } from './forgotpassword/forgotpassword.component';
 import { TablesComponent } from './tables/tables.component';
+import { NavMenuComponent } from './nav-menu/nav-menu.component';
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
 
 
 let routes = [
-  { path: "", component: LayoutComponent },
+  { path: "", component: AccountmanagerComponent },
+  { path: "login", component: LoginComponent },
    { path: "menu", component: MenuComponent },
     { path: "signup", component: SignupComponent },
     { path: "home", component: HomeComponent },
@@ -36,7 +40,7 @@ let routes = [
       })
 
    ],
-  declarations: [ AppComponent, HelloComponent, SignupComponent, HomeComponent, MenuComponent, LoginComponent, LayoutComponent, AccountmanagerComponent, ForgotpasswordComponent, TablesComponent,   ],
+  declarations: [ AppComponent, HelloComponent, SignupComponent, HomeComponent, MenuComponent, LoginComponent, LayoutComponent, AccountmanagerComponent, ForgotpasswordComponent, TablesComponent, NavMenuComponent, HeaderComponent, FooterComponent,   ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule {
