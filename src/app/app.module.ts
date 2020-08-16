@@ -16,6 +16,7 @@ import { NavMenuComponent } from './nav-menu/nav-menu.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { SummaryComponent } from './summary/summary.component';
+import { TransactionComponent } from './transaction/transaction.component';
 
 
 let routes = [
@@ -29,6 +30,7 @@ let routes = [
      { path: "forgotpassword", component: ForgotpasswordComponent },
      { path: "tables", component: TablesComponent },
       { path: "summary", component: SummaryComponent },
+      { path: "transaction", component: TransactionComponent },
     
    
 ];
@@ -42,7 +44,7 @@ let routes = [
       })
 
    ],
-  declarations: [ AppComponent, HelloComponent, SignupComponent, HomeComponent, MenuComponent, LoginComponent, LayoutComponent, AccountmanagerComponent, ForgotpasswordComponent, TablesComponent, NavMenuComponent, HeaderComponent, FooterComponent, SummaryComponent,   ],
+  declarations: [ AppComponent, HelloComponent, SignupComponent, HomeComponent, MenuComponent, LoginComponent, LayoutComponent, AccountmanagerComponent, ForgotpasswordComponent, TablesComponent, NavMenuComponent, HeaderComponent, FooterComponent, SummaryComponent, TransactionComponent,   ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule {
