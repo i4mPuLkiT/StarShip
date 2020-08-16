@@ -21,4 +21,11 @@ export class NavMenuComponent implements OnInit {
     this.isExpanded = !this.isExpanded;
   }
 
+  isAutenticate = false;
+  signin() {
+    this.isAutenticate = true;
+  }
+  signout() {
+    this.isAutenticate = false;
+  }
 }
