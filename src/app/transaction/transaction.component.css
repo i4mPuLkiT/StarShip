@@ -51,23 +51,3 @@ body {
 .form-group button[type=button] {
     margin: 0px;
 }
-
-
-
-/*/body {
-    background-color:white;
-}
-
-menu li{
-display:inline;
-}
-
-menu li::after{
-    content:'|';
-}
-
-menu li:last-of-type::after{
-    content:"";
-}*/
-
-
