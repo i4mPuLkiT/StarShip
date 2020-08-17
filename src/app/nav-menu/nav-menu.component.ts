@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+// import { UserService } from './user.service';
 
 @Component({
   selector: 'app-nav-menu',
@@ -10,6 +11,7 @@ export class NavMenuComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    
   }
   isExpanded = false;
 

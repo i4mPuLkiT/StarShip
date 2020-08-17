@@ -17,8 +17,9 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { SummaryComponent } from './summary/summary.component';
 import { TransactionComponent } from './transaction/transaction.component';
-import { ChartsModule } from 'ng2-charts/ng2-charts';
+// import { ChartsModule } from 'ng2-charts/ng2-charts';
 import { DataServiceService } from './data-service.service';
+import { UserService } from './user.service';
 
 
 let routes = [
@@ -39,7 +40,7 @@ let routes = [
 
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule,ChartsModule,
+  imports:      [ BrowserModule, FormsModule,
   RouterModule.forRoot(routes, {
           useHash: true,
           enableTracing: false // for Debugging of the Routes
@@ -48,7 +49,7 @@ let routes = [
    ],
   declarations: [ AppComponent, HelloComponent, SignupComponent, HomeComponent, MenuComponent, LoginComponent, LayoutComponent, AccountmanagerComponent, ForgotpasswordComponent, TablesComponent, NavMenuComponent, HeaderComponent, FooterComponent, SummaryComponent, TransactionComponent,   ],
   bootstrap:    [ AppComponent ],
-  providers: [DataServiceService]
+  providers: [DataServiceService, UserService]
 })
 export class AppModule {
  }
