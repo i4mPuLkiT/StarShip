@@ -19,6 +19,14 @@ export class SummaryComponent implements OnInit {
       });
     });
   }
+  public chartClicked(e:any):void {
+console.log(e);
+}
+
+public chartHovered(e:any):void {
+console.log(e);
+}
+
  public barChartOptions: any = {
     scaleShowVerticalLines: false,
     responsive: true
