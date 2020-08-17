@@ -13,28 +13,13 @@ form {
     padding: 30px;
 }
 
-.bg-gradient-primary {
-    background-color: #4e73df;
-}
-
 .form-container .form_icon {
     color: lightblue;
     font-size: 100px;
     text-align: center;
 }
 
-.btn-primary {
-    display: inline-block;
-    font-weight: 400;
-    text-align: center;
-    vertical-align: middle;
-    user-select: none;
-    border: 1px solid transparent;
-    padding: .375rem .75rem;
-    font-size: 1rem;
-    line-height: 1.5;
-    border-radius: 1.35rem;
-}
+
 
 .text-center{
     color:black;
