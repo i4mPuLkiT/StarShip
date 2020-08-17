@@ -120,3 +120,18 @@ form.user .form-control-user {
     border-radius: 0.35rem;
     transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
+
+.form-container {
+    border-radius: 10px;
+    padding: 30px;
+}
+
+.form-container .form_icon {
+    color: lightblue;
+    font-size: 100px;
+    text-align: center;
+}
+
+.text-center{
+    color:black;
+}
