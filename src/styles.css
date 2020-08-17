@@ -135,3 +135,34 @@ form.user .form-control-user {
 .text-center{
     color:black;
 }
+p {
+  font-family: Lato;
+}
+
+#back {
+  border: 10px;
+  padding: 15px;
+  margin: 2px 0%;
+  width: 100%;
+  background: white;
+  background-clip: border-box;  
+}
+#main {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.border-left-primary {
+    border-left: .25rem solid #4e73df!important;
+}
+
+.border-left-success {
+    border-left: .25rem solid #1cc88a!important;
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1200px;
+    }
+}
