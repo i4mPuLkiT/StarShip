@@ -161,8 +161,3 @@ p {
     border-left: .25rem solid #1cc88a!important;
 }
 
-@media (min-width: 1200px) {
-    .container {
-        max-width: 1200px;
-    }
-}
