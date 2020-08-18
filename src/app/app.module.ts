@@ -17,7 +17,7 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { SummaryComponent } from './summary/summary.component';
 import { TransactionComponent } from './transaction/transaction.component';
-// import { ChartsModule } from 'ng2-charts/ng2-charts';
+ import { ChartsModule } from 'ng2-charts/ng2-charts';
 import { DataServiceService } from './data-service.service';
 import { UserService } from './user.service';
 
