@@ -1,7 +1,8 @@
  import { Injectable } from '@angular/core';
  @Injectable()
 export class UserService {
-public admin = 
+  constructor() {   }
+  public admin = 
          {
         "id": 1,
         "name": "Admin",
@@ -9,6 +10,6 @@ public admin =
         "passwor":"12345",
         "isAuthenticate": true
          }
-   constructor() {   }
+ 
   
 }
