@@ -17,12 +17,12 @@
                                     <h1 class="h4 text-gray-900 mb-4">Login</h1>
                                 </div>
                                 <hr />
-                                    <form class="user">
+                                    <form class="user" (submit)="signin()" >
                                         <div class="form-group">
-                                            <input type="email" class="form-control form-control-user" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Username(Email Address/Phone No.)">
+                                            <input type="email" name="username" class="form-control form-control-user" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Username(Email Address/Phone No.)" [(ngModel)]="creds.username" >
                                         </div>
                                         <div class="form-group">
-                                            <input type="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Password">
+                                            <input type="password" name="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Password" [(ngModel)]="creds.password">
                                         </div>
                                         <div class="form-group">
                                             <div class="custom-control custom-checkbox small text-center">
@@ -30,10 +30,9 @@
                                                 <label class="custom-control-label" for="customCheck">Remember me</label>
                                             </div>
                                         </div>
-                                        <a class="btn btn-primary btn-user btn-block" (click)="signin()" >
-                                            Login
-                                        </a>
-                                       
+                                        <div class="form-group">
+                                        <input type="submit" class="btn btn-primary btn-user btn-block"  />
+                                        </div>
                                     </form>
                                     <hr>
                                     <div class="text-center">

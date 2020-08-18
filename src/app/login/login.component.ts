@@ -9,8 +9,10 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
 public userService: any;
-public email:string;
-public password:string;
+public creds={
+    username:"",
+    password:""
+};
   constructor(private us: UserService, private router: Router ) {
     this.userService = this.us;
    }
@@ -19,18 +21,20 @@ public password:string;
   }
   signin()
   {
-      if((this.email == this.userService.admin.email 
-      || this.email == this.userService.admin.phone)
-      && this.password == this.userService.admin.password 
+      //alert("inputs " + this.creds.username + "    " +this.creds.password); 
+      if((this.creds.username == this.userService.admin.email 
+      || this.creds.username == this.userService.admin.phone)
+      && this.creds.password == this.userService.admin.password 
       )
       {
+        //alert("Login Failed! " + this.creds.username + "    " +this.creds.password);     
           this.userService.admin.isAuthenticate=true;
           this.router.navigate(["home"]);
       }
       else
       {
          this.userService.admin.isAuthenticate=false;
-         console.log("Login Failed! " + this.email + "    " +this.password );     
+         //alert("Login Failed! " + this.creds.username + "    " +this.creds.password);     
           //this.router.navigate(["login"]);   
         
         

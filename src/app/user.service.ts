@@ -11,4 +11,6 @@ export class UserService {
         "password":"12345",
         "isAuthenticate": false
          }
+  public userlist: any;
+   
 }
