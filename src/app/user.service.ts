@@ -5,9 +5,9 @@ export class UserService {
   public admin = 
          {
         "id": 1,
-        "name": "Admin",
+        "name": "Adminstrator",
         "phone": "11111",
-        "passwor":"12345",
+        "password":"12345",
         "isAuthenticate": true
          }
  
