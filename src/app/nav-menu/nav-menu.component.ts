@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-// import { UserService } from './user.service';
+import { UserService } from '../user.service';
 
 @Component({
   selector: 'app-nav-menu',
@@ -8,10 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavMenuComponent implements OnInit {
 
-  constructor() { }
-
+public data: any;
+  constructor(private us: UserService) {
+    this.data = this.us;
+   }
   ngOnInit() {
-    
   }
   isExpanded = false;
 
@@ -20,14 +21,17 @@ export class NavMenuComponent implements OnInit {
   }
 
   toggle() {
-    this.isExpanded = !this.isExpanded;
+    //this.isExpanded = !this.isExpanded;
+    this.data.isAutenticate= !this.data.isAutenticate;
   }
 
   isAutenticate = false;
   signin() {
-    this.isAutenticate = true;
+    this.data.isAutenticate=true; 
+    //this.isAutenticate = true;
   }
   signout() {
-    this.isAutenticate = false;
+    this.data.isAutenticate=false; 
+    //this.isAutenticate = false;
   }
 }
