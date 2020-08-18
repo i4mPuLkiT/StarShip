@@ -6,10 +6,9 @@ export class UserService {
          {
         "id": 1,
         "name": "Adminstrator",
+        "email": "admin@brolia.com",
         "phone": "11111",
         "password":"12345",
-        "isAuthenticate": true
+        "isAuthenticate": false
          }
- 
-  
 }
