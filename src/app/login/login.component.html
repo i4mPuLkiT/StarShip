@@ -1,63 +1,61 @@
+<div class="container bg-gradient-primary">
 
+	<!-- Outer Row -->
+	<div class="row justify-content-center">
 
-    <div class="container bg-gradient-primary">
+		<div class="col-xl-10 col-lg-10 col-md-9">
 
-        <!-- Outer Row -->
-        <div class="row justify-content-center">
-
-            <div class="col-xl-10 col-lg-10 col-md-9">
-
-                <div class="card o-hidden border-0 shadow-lg my-5">
-                    <div class="card-body p-5">
-                        <!-- Nested Row within Card Body -->
-                        <div class="row justify-content-center">
-                            <div class="col-12 col-lg-6">
-                                <div class="p-5">
-                                   <div class="text-center">
-                                    <h1 class="h4 text-gray-900 mb-4">Login</h1>
-                                </div>
-                                <hr />
-                                    <form class="user" (submit)="signin()"  >
-                                        <div class="form-group">
-                                            <input type="email" name="username" class="form-control form-control-user" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Username(Email Address/Phone No.)" [(ngModel)]="creds.username" #username="ngModel" required >
+			<div class="card o-hidden border-0 shadow-lg my-5">
+				<div class="card-body p-5">
+					<!-- Nested Row within Card Body -->
+					<div class="row justify-content-center">
+						<div class="col-12 col-lg-6">
+							<div class="p-5">
+								<div class="text-center">
+									<h1 class="h4 text-gray-900 mb-4">Login</h1>
+								</div>
+								<hr />
+								<form class="user" (submit)="signin()" #theForm="ngForm" novalidate>
+									<div class="form-group">
+										<input type="email" name="username" class="form-control form-control-user" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Username(Email Address/Phone No.)" [(ngModel)]="creds.username" #username="ngModel" required >
                                         </div>
-                                        
-                <div class="text-danger" *ngIf="username.touched && username.invalid && username.errors.required">Username is required!</div>
-                                        <div class="form-group">
-                                            <input type="password" name="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Password" [(ngModel)]="creds.password" #password="ngModel"  required>
+
+										<div class="text-danger"
+											*ngIf="username.touched && username.invalid && username.errors.required">
+											Username is required!</div>
+										<div class="form-group">
+											<input type="password" name="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Password" [(ngModel)]="creds.password" #password="ngModel"  required>
                                         </div>
-                                        
-                <div class="text-danger" *ngIf="password.touched && password.invalid && password.errors.required">Password is required!</div>
 
-                                        <div class="form-group">
-                                            <div class="custom-control custom-checkbox small text-center">
-                                                <input type="checkbox" class="custom-control-input" id="customCheck">
-                                                <label class="custom-control-label" for="customCheck">Remember me</label>
-                                            </div>
+											<div class="text-danger"
+												*ngIf="password.touched && password.invalid && password.errors.required">
+												Password is required!</div>
+
+											<div class="form-group">
+												<div class="custom-control custom-checkbox small text-center">
+													<input type="checkbox" class="custom-control-input" id="customCheck">
+													<label class="custom-control-label" for="customCheck">Remember me</label>
+												</div>
+											</div>
+											<div class="form-group">
+												<input type="submit" class="btn btn-primary btn-user btn-block" [disabled]="theForm.invalid" />
                                         </div>
-                                        <div class="form-group">
-                                        <input type="submit" class="btn btn-primary btn-user btn-block" [disabled]="theForm.invalid" />
-                                        </div>
-                                    </form>
-                                    <hr>
-                                    <div class="text-center">
-                                        <a class="small" href="forgot-password.html">Forgot Password?</a>
-                                    </div>
-                                    <div class="text-center">
-                                        <a class="small" [routerLink]='["/signup"]'>Register</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+								</form>
+								<hr>
+								<div class="text-center">
+									<a class="small" href="forgot-password.html">Forgot Password?</a>
+								</div>
+								<div class="text-center">
+									<a class="small" [routerLink]='["/signup"]'>Register</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 
-            </div>
+		</div>
 
-        </div>
+	</div>
 
-    </div>
-
-
-
-
+</div>
