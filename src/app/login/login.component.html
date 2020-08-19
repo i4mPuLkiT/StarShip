@@ -17,7 +17,7 @@
                                     <h1 class="h4 text-gray-900 mb-4">Login</h1>
                                 </div>
                                 <hr />
-                                    <form class="user" (submit)="signin()" >
+                                    <form class="user" (submit)="signin()"  >
                                         <div class="form-group">
                                             <input type="email" name="username" class="form-control form-control-user" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Username(Email Address/Phone No.)" [(ngModel)]="creds.username" #username="ngModel" required >
                                         </div>
@@ -27,6 +27,8 @@
                                             <input type="password" name="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Password" [(ngModel)]="creds.password" #password="ngModel"  required>
                                         </div>
                                         
+                <div class="text-danger" *ngIf="password.touched && password.invalid && password.errors.required">Password is required!</div>
+
                                         <div class="form-group">
                                             <div class="custom-control custom-checkbox small text-center">
                                                 <input type="checkbox" class="custom-control-input" id="customCheck">
@@ -34,7 +36,7 @@
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                        <input type="submit" class="btn btn-primary btn-user btn-block"  />
+                                        <input type="submit" class="btn btn-primary btn-user btn-block" [disabled]="theForm.invalid" />
                                         </div>
                                     </form>
                                     <hr>
