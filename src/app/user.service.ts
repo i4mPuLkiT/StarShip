@@ -12,5 +12,6 @@ export class UserService {
         "isAuthenticate": false
          }
   public userlist: any;
-   
+   "id" = 1;
+   "name" = "Pulkit";
 }
