@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from '../user.service';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-nav-menu',
@@ -7,9 +9,9 @@ import { UserService } from '../user.service';
   styleUrls: ['./nav-menu.component.css']
 })
 export class NavMenuComponent implements OnInit {
-public data: any;
-  constructor(private us: UserService) {
-    this.data = this.us.admin;
+  public us: any;
+  constructor(private uss: UserService, private router: Router) {
+    this.us = this.uss;
    }
   ngOnInit() {
   }
@@ -20,12 +22,25 @@ public data: any;
   }
 
   toggle() {
-    this.data.isAutenticate= !this.data.isAutenticate;
+    this.us.admin.isAuthenticate = !this.us.admin.isAuthenticate;
   }
   signin() {
-    this.data.isAutenticate=true; 
+    this.us.admin.isAuthenticate=true; 
   }
   signout() {
-    this.data.isAutenticate=false; 
+    this.us.admin.isAuthenticate=false; 
+  }
+  homeclick(){
+         alert("this.us.admin.isAuthenticate =" + this.us.admin.isAuthenticate);
+    if(    this.us.admin.isAuthenticate ==  true )
+    {
+     this.router.navigate(["home"]);
+
+    }
+    else{
+
+          this.router.navigate(["login"]);
+
+    }
   }
 }

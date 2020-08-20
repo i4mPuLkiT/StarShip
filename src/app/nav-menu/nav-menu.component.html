@@ -1,6 +1,6 @@
 <header>
   <nav class='navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark border-bottom box-shadow mb-3'>
-    <i class="fa fa-gg" aria-hidden="true"></i><a class="navbar-brand" href="/">{{data.name}}</a>
+    <i class="fa fa-gg" aria-hidden="true"></i><a class="navbar-brand"(click)="homeclick()">{{us.admin.name}}</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-label="Toggle navigation"
       [attr.aria-expanded]="isExpanded" (click)="toggle()">
       <span class="navbar-toggler-icon"></span>
@@ -8,12 +8,12 @@
     <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse" [ngClass]='{"show": isExpanded}'>
       <ul class="navbar-nav flex-grow-1">
         <li class="nav-item" [routerLinkActive]='["link-active"]' [routerLinkActiveOptions]='{ exact: true }'>
-          <a class="nav-link text-white" [routerLink]='["/"]'>Home</a>
+          <a class="nav-link text-white" (click)="homeclick()">Home</a>
         </li>
-        <li class="nav-item" [routerLinkActive]='["link-active"]'  *ngIf="!data.isAutenticate" >
+        <li class="nav-item" [routerLinkActive]='["link-active"]'  *ngIf="!us.admin.isAutenticate" >
           <a class="nav-link text-white" [routerLink]='["/login"]' (click)="signin()" >Login </a>
         </li>
-         <li class="nav-item" [routerLinkActive]='["link-active"]' *ngIf="data.isAutenticate" >
+         <li class="nav-item" [routerLinkActive]='["link-active"]' *ngIf="us.admin.isAutenticate" >
           <a class="nav-link text-white" [routerLink]='["/login"]' (click)="signout()">Logout </a>
         </li>
          <li class="nav-item" [routerLinkActive]='["link-active"]'>
