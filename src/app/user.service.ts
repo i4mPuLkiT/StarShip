@@ -24,40 +24,7 @@ export class UserService {
         "name": "Adminstrator",
         }
          },
-          {
-        "id": 2,
-        "date": "10/08/2020",
-        "debit": 800,
-        "credit": 100,
-        "description":"daal",
-        "user":{
-           "id": 1,
-        "name": "Adminstrator",
-        }
-         },
-          {
-        "id": 3,
-        "date": "10/08/2020",
-        "debit": 5000,
-        "credit": 500,
-        "description":"namkeen",
-        "user":{
-           "id": 1,
-        "name": "Adminstrator",
-        }
-         },
-          {
-        "id": 4,
-        "date": "10/08/2020",
-        "debit": 7000,
-        "credit": 900,
-        "description":"coke",
-        "user":{
-           "id": 1,
-        "name": "Adminstrator",
-        }
-         },
-        
+         
        ]
  
 }

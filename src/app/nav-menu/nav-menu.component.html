@@ -10,10 +10,10 @@
         <li class="nav-item" [routerLinkActive]='["link-active"]' [routerLinkActiveOptions]='{ exact: true }'>
           <a class="nav-link text-white" (click)="homeclick()">Home</a>
         </li>
-        <li class="nav-item" [routerLinkActive]='["link-active"]'  *ngIf="!us.admin.isAutenticate" >
+        <li class="nav-item" [routerLinkActive]='["link-active"]'  *ngIf="us.admin.isAutenticate" >
           <a class="nav-link text-white" [routerLink]='["/login"]' (click)="signin()" >Login </a>
         </li>
-         <li class="nav-item" [routerLinkActive]='["link-active"]' *ngIf="us.admin.isAutenticate" >
+         <li class="nav-item" [routerLinkActive]='["link-active"]' *ngIf="!us.admin.isAutenticate" >
           <a class="nav-link text-white" [routerLink]='["/login"]' (click)="signout()">Logout </a>
         </li>
          <li class="nav-item" [routerLinkActive]='["link-active"]'>
