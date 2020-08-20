@@ -29,7 +29,7 @@ export class UserService {
         "date": "10/08/2020",
         "debit": 800,
         "credit": 100,
-        "description":"dal",
+        "description":"daal",
         "user":{
            "id": 1,
         "name": "Adminstrator",

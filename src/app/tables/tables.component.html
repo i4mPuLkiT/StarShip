@@ -3,16 +3,22 @@
 <table class='table'>
   <thead>
     <tr>
+      <th>Date</th>
       <th>Name</th>
-      <th>Debt</th>
+      <th>Debit</th>
       <th>Credit</th>
+      <th>description</th>
     </tr>
   </thead>
   <tbody *ngIf="transactions">
     <tr *ngFor="let tran of transactions">
-      <td>{{ tran.name }}</td>
-      <td>{{ tran.dbt }}</td>
-      <td>{{ tran.crt }}</td>
+     <td>{{ tran.date }}</td>
+      <td>{{ tran.user.name }}</td>
+      <td>{{ tran.debit }}</td>
+      <td>{{ tran.credit }}</td>
+      <td>{{ tran.description }}</td>
+
+
     </tr>
   </tbody>
 </table>
