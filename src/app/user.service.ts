@@ -11,7 +11,53 @@ export class UserService {
         "password":"12345",
         "isAuthenticate": false
          }
-  public userlist: any;
-   "id" = 1;
-   "name" = "Pulkit";
+  public transactionlist =[
+
+         {
+        "id": 1,
+        "date": "10/08/2020",
+        "debit": 500,
+        "credit": 0,
+        "description":"pepsi",
+        "user":{
+           "id": 1,
+        "name": "Adminstrator",
+        }
+         },
+          {
+        "id": 2,
+        "date": "10/08/2020",
+        "debit": 800,
+        "credit": 100,
+        "description":"dal",
+        "user":{
+           "id": 1,
+        "name": "Adminstrator",
+        }
+         },
+          {
+        "id": 3,
+        "date": "10/08/2020",
+        "debit": 5000,
+        "credit": 500,
+        "description":"namkeen",
+        "user":{
+           "id": 1,
+        "name": "Adminstrator",
+        }
+         },
+          {
+        "id": 4,
+        "date": "10/08/2020",
+        "debit": 7000,
+        "credit": 900,
+        "description":"coke",
+        "user":{
+           "id": 1,
+        "name": "Adminstrator",
+        }
+         },
+        
+       ]
+ 
 }

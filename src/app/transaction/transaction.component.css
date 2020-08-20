@@ -20,7 +20,8 @@ body {
 }
 
 .form-group textarea {
-    width:250px;
+    width:350px;
+    height: 125px;
 }
 
 .form-group input[type=submit] {

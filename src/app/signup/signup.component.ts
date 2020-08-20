@@ -10,7 +10,11 @@ import { Router } from '@angular/router';
 })
 export class SignupComponent implements OnInit {
 public userService: any;
-
+public creds={
+    name:"",
+    username:"",
+    password:""
+};
   constructor(private us: UserService, private router: Router ) { 
         this.userService = this.us;
 
