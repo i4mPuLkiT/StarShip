@@ -22,16 +22,18 @@ export class NavMenuComponent implements OnInit {
   }
 
   toggle() {
-    this.us.admin.isAuthenticate = !this.us.admin.isAuthenticate;
+     this.isExpanded = !this.isExpanded;
   }
   signin() {
-    this.us.admin.isAuthenticate=true; 
+    this.router.navigate(["login"]);
   }
   signout() {
     this.us.admin.isAuthenticate=false; 
+      this.router.navigate(["login"]);
+
   }
   homeclick(){
-         alert("this.us.admin.isAuthenticate =" + this.us.admin.isAuthenticate);
+        //  alert("this.us.admin.isAuthenticate =" + this.us.admin.isAuthenticate);
     if(    this.us.admin.isAuthenticate ==  true )
     {
      this.router.navigate(["home"]);

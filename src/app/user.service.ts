@@ -1,15 +1,16 @@
  import { Injectable } from '@angular/core';
- 
+import * as ModelNS from './model/model';
+
  @Injectable()
 export class UserService {
   constructor() {   }
-  public admin = 
+  public admin:ModelNS.Appuser = 
          {
         "id": 1,
         "name": "Adminstrator",
         "email": "admin@brolia.com",
-        "phone": "11111",
-        "password":"12345",
+        "phone": "1",
+        "password":"1",
         "isAuthenticate": false
          }
   public transactionlist =[
