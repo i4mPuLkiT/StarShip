@@ -11,7 +11,7 @@ export class UserService {
         "email": "admin@brolia.com",
         "phone": "1",
         "password":"1",
-        "isAuthenticate": false
+        "isAuthenticate": tr
          }
   public transactionlist =[
 

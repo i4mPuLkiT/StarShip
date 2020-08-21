@@ -19,7 +19,7 @@ public userService: any;
   ngOnInit() {  
   }
 
-  click(){
+  cancel(){
         //  alert("this.us.admin.isAuthenticate =" + this.us.admin.isAuthenticate);
     if(    this.us.admin.isAuthenticate ==  true )
     {
@@ -28,7 +28,7 @@ public userService: any;
     }
     else{
 
-      //  this.router.navigate(["login"]);
+       this.router.navigate(["login"]);
 
     }
   }
