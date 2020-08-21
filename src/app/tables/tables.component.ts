@@ -17,7 +17,7 @@ ngOnInit() {
   
    constructor(private us: UserService, private router: Router){
        this.transactions = this.us.transactions;
-       alert(this.transactions.length)
+       alert(this.transactions.length);
    }
 
   
