@@ -4,6 +4,12 @@ import * as ModelNS from './model/model';
  @Injectable()
 export class UserService {
   constructor() {   }
+public transactions:Array<ModelNS.Transaction>=new Array<ModelNS.Transaction>();
+  public newTransaction(trans:ModelNS.Transaction){
+    
+    this.transactions.push(trans);
+    //alert(this.transactions.length);
+  }
   public admin:ModelNS.Appuser = 
          {
         "id": 1,
@@ -11,7 +17,7 @@ export class UserService {
         "email": "admin@brolia.com",
         "phone": "1",
         "password":"1",
-        "isAuthenticate": tr
+        "isAuthenticate": true
          }
   public transactionlist =[
 

@@ -17,7 +17,7 @@
                   <h1 class="h4 text-gray-900 mb-4">New Transaction</h1>
                     </div>
                      <hr />
-                        <form>
+                        <form class="user" (submit)="add()" #theForm="ngForm" novalidate>
                         <div class="form-group ">
                            <div class="input-group mb-3">
                               <input class="form-control" placeholder="Search..." name="Search" type="text" />
@@ -30,10 +30,10 @@
          <div class="form-group text-center">
             <label class="text-muted"><b>Amount</b></label>
                  <div class="row justify-content-center">
-                     <input type="text" class="form-control" placeholder="Enter Amount...." />
+                     <input type="text" name="Amount" [(ngModel)]="trans.amount" class="form-control" placeholder="Enter Amount...." />
                         </div>
-                          <button class="btn btn-circle bg-primary text-white" type="submit">Debit</button>
-                             <button class="btn btn-circle bg-primary text-white" type="submit">Credit</button>
+                          <button class="btn btn-circle bg-primary text-white" (click)="debit()">Debit</button>
+                             <button class="btn btn-circle bg-primary text-white" (click)="credit()">Credit</button>
                               </div>
          <div class="form-group text-center">
               <label class="text-muted"><b>Discription</b></label>
@@ -41,7 +41,7 @@
                     <textarea class="form-control" rows="3" placeholder="Optional"></textarea>
                      </div>
                        <button type="reset" class="btn btn-danger" (click)="cancel()" >Cancel</button>
-                         <button type="submit" class="btn btn-primary">Add</button>
+                         <button type="submit" class="btn btn-primary" (click)="add()">Add</button>
                            </div>
                                        
                               </form>

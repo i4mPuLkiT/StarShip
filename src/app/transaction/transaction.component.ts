@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from '../user.service';
 import { Router } from '@angular/router';
+import * as ModelNS from '../model/model';
 
 
 @Component({
@@ -10,13 +11,28 @@ import { Router } from '@angular/router';
 })
 export class TransactionComponent implements OnInit {
 public userService: any; 
-
-  constructor(private us: UserService, private router: Router) { 
+public trans:ModelNS.Transaction = new ModelNS.Transaction();
+  constructor(private us: UserService, private router: Router, ) { 
         this.userService = this.us;
 
   }
 
   ngOnInit() {  
+
+  }
+  add(){
+    if(    this.us.admin.isAuthenticate ==  true )
+    {
+        
+      this.userService.newTransaction(this.trans);
+       this.router.navigate(["home"]);
+
+    }
+    else{
+
+       this.router.navigate(["login"]);
+
+    }
   }
 
   cancel(){
@@ -31,5 +47,14 @@ public userService: any;
        this.router.navigate(["login"]);
 
     }
+  }
+  debit(){    
+    this.trans.type = "Dr";
+    // alert(this.trans.type )
+  }
+   credit(){
+    this.trans.type = "Cr";
+        // alert(this.trans.type )
+
   }
 }

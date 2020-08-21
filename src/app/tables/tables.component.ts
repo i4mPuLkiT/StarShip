@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from '../user.service';
 import { Router } from '@angular/router';
+import * as ModelNS from '../model/model';
 
 
 @Component({
@@ -9,16 +10,14 @@ import { Router } from '@angular/router';
   styleUrls: ['./tables.component.css']
 })
 export class TablesComponent implements OnInit {
-  public userService: any;
+ public transactions:Array<ModelNS.Transaction>=new Array<ModelNS.Transaction>();
 
 ngOnInit() {
   }
-   public transactions: any;
+  
    constructor(private us: UserService, private router: Router){
-         this.userService = this.us;
-
-       this.transactions = this.userService.transactionlist;
-       
+       this.transactions = this.us.transactions;
+       alert(this.transactions.length)
    }
 
   

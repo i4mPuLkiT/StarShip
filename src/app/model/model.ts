@@ -9,8 +9,8 @@ export class Appuser {
 export class Transaction {
    id: number;
    date: string;
-   debit: number;
-   credit: number;
+   amount: number;
+   type: string;
    description: string;
    user: Appuser;
 }
