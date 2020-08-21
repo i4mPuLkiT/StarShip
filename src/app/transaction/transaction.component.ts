@@ -11,19 +11,25 @@ import { Router } from '@angular/router';
 export class TransactionComponent implements OnInit {
 public userService: any; 
 
-public id: Number;
-public date: Date;
-public debit: Float32List;
-public credit: Float32List;
-public description: String;
-
   constructor(private us: UserService, private router: Router) { 
         this.userService = this.us;
 
   }
 
-  ngOnInit() {
-    
+  ngOnInit() {  
   }
 
+  click(){
+        //  alert("this.us.admin.isAuthenticate =" + this.us.admin.isAuthenticate);
+    if(    this.us.admin.isAuthenticate ==  true )
+    {
+     this.router.navigate(["home"]);
+
+    }
+    else{
+
+      //  this.router.navigate(["login"]);
+
+    }
+  }
 }
