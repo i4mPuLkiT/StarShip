@@ -4,9 +4,21 @@ import * as ModelNS from './model/model';
  @Injectable()
 export class UserService {
   constructor() {   }
+  public totalDebit:number = 0;
+  public totalCredit:number = 0;
+
 public transactions:Array<ModelNS.Transaction>=new Array<ModelNS.Transaction>();
   public newTransaction(trans:ModelNS.Transaction){
     
+    if( trans.type == "Dr")
+    {
+      this.totalDebit += trans.amount;
+      alert("this.totalDebit");
+    }
+    if( trans.type == "Cr")
+    {
+      this.totalCredit =this.totalCredit + trans.amount;
+    }
     this.transactions.push(trans);
     //alert(this.transactions.length);
   }
@@ -19,20 +31,6 @@ public transactions:Array<ModelNS.Transaction>=new Array<ModelNS.Transaction>();
         "password":"1",
         "isAuthenticate": true
          }
-  public transactionlist =[
-
-         {
-        "id": 1,
-        "date": "10/08/2020",
-        "debit": 500,
-        "credit": 0,
-        "description":"pepsi",
-        "user":{
-           "id": 1,
-        "name": "Adminstrator",
-        }
-         },
-         
-       ]
+ 
  
 }

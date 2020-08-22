@@ -8,7 +8,7 @@ export class Appuser {
 }
 export class Transaction {
    id: number;
-   date: string;
+   date: Date = new Date();
    amount: number;
    type: string;
    description: string;
