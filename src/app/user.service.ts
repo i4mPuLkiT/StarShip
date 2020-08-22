@@ -12,8 +12,7 @@ public transactions:Array<ModelNS.Transaction>=new Array<ModelNS.Transaction>();
     
     if( trans.type == "Dr")
     {
-      this.totalDebit += trans.amount;
-      alert("this.totalDebit");
+      this.totalDebit = this.totalDebit + trans.amount;
     }
     if( trans.type == "Cr")
     {
