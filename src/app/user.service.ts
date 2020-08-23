@@ -1,26 +1,39 @@
- import { Injectable } from '@angular/core';
+import { Injectable } from '@angular/core';
 import * as ModelNS from './model/model';
+import {observable} from "rxjs";
+import * as _ from "lodash";
 
  @Injectable()
 export class UserService {
   constructor() {   }
-  public totalDebit:number = 0;
-  public totalCredit:number = 0;
 
 public transactions:Array<ModelNS.Transaction>=new Array<ModelNS.Transaction>();
   public newTransaction(trans:ModelNS.Transaction){
-    
-    if( trans.type == "Dr")
-    {
-      this.totalDebit = this.totalDebit + trans.amount;
-    }
-    if( trans.type == "Cr")
-    {
-      this.totalCredit =this.totalCredit + trans.amount;
-    }
+   
     this.transactions.push(trans);
-    //alert(this.transactions.length);
   }
+  get getTotalDebit():number
+  {
+    if(this.transactions.length >0 && this.transactions.find(itm=>itm.type=="Dr"))
+    {
+     return   _.sum(_.map(this.transactions, i=> i.type=="Dr" && Number(i.amount)));
+    }
+    else
+    {
+      return 0;    
+    }
+  };
+  get getTotalCredit():number
+  {
+    if(this.transactions.length >0 && this.transactions.find(itm=>itm.type=="Cr"))
+    {
+    return  _.sum(_.map(this.transactions, i=> i.type=="Cr" && Number(i.amount)));
+    }
+    else
+    {
+      return 0;    
+    }
+  };
   public admin:ModelNS.Appuser = 
          {
         "id": 1,
