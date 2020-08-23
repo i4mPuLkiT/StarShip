@@ -15,7 +15,7 @@
 									<h1 class="h4 text-gray-900 mb-4">New Transaction</h1>
 								</div>
 								<hr />
-								<form class="user" (submit)="add()" #theForm="ngForm" novalidate>
+							
 									<div class="form-group ">
 										<div class="input-group mb-3">
 											<input class="form-control" placeholder="Search..." name="Search" type="text" />
@@ -36,13 +36,14 @@
 										<div class="form-group text-center">
 											<label class="text-muted"><b>Discription</b></label>
 											<div class="row justify-content-center">
-												<textarea class="form-control" rows="3" placeholder="Optional"></textarea>
+												<textarea [(ngModel)]="trans. description"  class="form-control" rows="3" placeholder="Optional"></textarea>
 											</div>
-											<button type="reset" class="btn btn-danger" (click)="cancel()" >Cancel</button>
+											<button type="reset" class="btn btn-danger" (click)="cancel()" >Cancel</button>	<form class="user" (submit)="add()" #theForm="ngForm" novalidate>
 											<button type="submit" class="btn btn-primary" (click)="add()">Add</button>
+                      	</form>
 										</div>
-
-								</form>
+                
+							
 							</div>
 						</div>
 					</div>
