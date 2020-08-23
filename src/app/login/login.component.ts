@@ -21,24 +21,19 @@ public creds={
   }
   signin()
   {
-      //alert("inputs " + this.creds.username + "    " +this.creds.password); 
       if((this.creds.username == this.userService.admin.email 
       || this.creds.username == this.userService.admin.phone)
       && this.creds.password == this.userService.admin.password 
       )
       {
-        //alert("Login Failed! " + this.creds.username + "    " +this.creds.password);     
           this.userService.admin.isAuthenticate=true;
           this.router.navigate(["home"]);
       }
       else
       {
          this.userService.admin.isAuthenticate=false;
-         //alert("Login Failed! " + this.creds.username + "    " +this.creds.password);     
-          //this.router.navigate(["login"]);   
         
         
       }
   }
-//[routerLink]='["/home"]'
 }
