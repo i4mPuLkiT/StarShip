@@ -34,6 +34,18 @@ public transactions:Array<ModelNS.Transaction>=new Array<ModelNS.Transaction>();
       return 0;    
     }
   };
+
+  get getTotalCreditPercentage():number
+  {
+    if(this.getTotalCredit >0 )
+    {
+    return  _.round(((this.getTotalCredit/(this.getTotalDebit + this.getTotalCredit))*100),2);
+    }
+    else
+    {
+      return 0;    
+    }
+  };
   public admin:ModelNS.Appuser = 
          {
         "id": 1,
