@@ -20,7 +20,7 @@
     "rxjs": "6.6.2",
     "tslib": "2.0.1",
     "zone.js": "0.10.3",
-    "lodash": "^4.17.4"
+    "lodash": "4.17.20"
   },
   "scripts": {
     "ng": "ng",
