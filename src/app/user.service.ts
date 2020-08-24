@@ -10,6 +10,17 @@ public editTrans:ModelNS.Transaction;
 public transactions:Array<ModelNS.Transaction>=new Array<ModelNS.Transaction>();
   public newTransaction(trans:ModelNS.Transaction){
     this.editTrans=null;
+    //alert(Math.max(...this.transactions.map(o => o.id), 1));
+    // trans.id=this.transactions.max(i=>i.id) +1;
+    if(this.transactions.length>0)
+    {
+      trans.id=this.transactions[this.transactions.length-1].id + 1;
+    }
+    else
+    {
+      trans.id=1;
+    }
+
     this.transactions.push(trans);
   }
   get getTotalDebit():number
@@ -62,10 +73,10 @@ public transactions:Array<ModelNS.Transaction>=new Array<ModelNS.Transaction>();
   {
     this.editTrans=trans;
   }
-editTransaction(trans:ModelNS.Transaction){
+  editTransaction(trans:ModelNS.Transaction){
     if(this.transactions.length>0)
     {
-
+         this.transactions.find(f=>f.id==trans.id).amount=trans.amount;
     }
 }
 
