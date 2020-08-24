@@ -58,10 +58,17 @@ public transactions:Array<ModelNS.Transaction>=new Array<ModelNS.Transaction>();
     }
   };
 
-  edit(trans:ModelNS.Transaction){
+  edit(trans:ModelNS.Transaction)
+  {
     this.editTrans=trans;
-    alert(this.editTrans.amount);
+  }
+editTransaction(trans:ModelNS.Transaction){
+    if(this.transactions.length>0)
+    {
+
+    }
 }
+
 
   public admin:ModelNS.Appuser = 
          {

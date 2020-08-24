@@ -12,10 +12,12 @@ import * as ModelNS from '../model/model';
 export class TransactionComponent implements OnInit {
 public userService: any; 
 public trans:ModelNS.Transaction = new ModelNS.Transaction();
+public isEdit:boolean=false;
   constructor(private us: UserService, private router: Router, ) { 
         this.userService = this.us;
         if(this.userService.editTrans!=null )
         {
+          this.isEdit=true;
           this.trans=this.userService.editTrans;
         }
 
@@ -27,8 +29,14 @@ public trans:ModelNS.Transaction = new ModelNS.Transaction();
   add(){
     if(    this.us.admin.isAuthenticate ==  true )
     {
-        
-      this.userService.newTransaction(this.trans);
+      if(this.isEdit)
+      {
+        this.userService.editTransaction(this.trans);
+      }
+      else
+      {
+        this.userService.newTransaction(this.trans);
+      }
        this.router.navigate(["home"]);
 
     }
