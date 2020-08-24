@@ -8,15 +8,21 @@
       <th>Amount</th>
       <th>Type</th>
       <th>Description</th>
+      <th></th>
     </tr>
   </thead>
   <tbody *ngIf="transactions">
     <tr *ngFor="let tran of transactions">
        <td>{{tran.date | date:"dd/mm/yyyy HH:mm"}}</td>
       <!-- <td>{{ tran.user.name }}</td>  -->
-      <td>{{ tran.amount }}</td>
+      <td (click)="edit(tran.id)">{{ tran.amount }}</td>
       <td>{{ tran.type }}</td>
       <td>{{ tran.description }}</td>
+       <td>
+       
+       <span class="table-remove">
+              <button type="button" class="btn btn-danger" (click)="remove(tran.id)">Remove</button>
+            </span></td>
     </tr>
   </tbody>
 </table>
