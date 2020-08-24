@@ -14,6 +14,10 @@ public userService: any;
 public trans:ModelNS.Transaction = new ModelNS.Transaction();
   constructor(private us: UserService, private router: Router, ) { 
         this.userService = this.us;
+        if(this.userService.editTrans!=null )
+        {
+          this.trans=this.userService.editTrans;
+        }
 
   }
 
