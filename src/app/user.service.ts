@@ -6,10 +6,10 @@ import * as _ from "lodash";
  @Injectable()
 export class UserService {
   constructor() {   }
-
+public editTrans:ModelNS.Transaction;
 public transactions:Array<ModelNS.Transaction>=new Array<ModelNS.Transaction>();
   public newTransaction(trans:ModelNS.Transaction){
-   
+    this.editTrans=null;
     this.transactions.push(trans);
   }
   get getTotalDebit():number
@@ -57,6 +57,12 @@ public transactions:Array<ModelNS.Transaction>=new Array<ModelNS.Transaction>();
       return 0;    
     }
   };
+
+  edit(trans:ModelNS.Transaction){
+    this.editTrans=trans;
+    alert(this.editTrans.amount);
+}
+
   public admin:ModelNS.Appuser = 
          {
         "id": 1,

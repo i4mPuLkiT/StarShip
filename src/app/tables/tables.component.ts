@@ -17,16 +17,17 @@ ngOnInit() {
   
    constructor(private us: UserService, private router: Router){
        this.transactions = this.us.transactions;
+       
    }
-edit(id: any)
+edit(trans:ModelNS.Transaction)
 {
-
+  this.us.edit(trans);
   this.router.navigate(["transaction"]);
   
 }
-remove(id: any) {
+remove(trans:ModelNS.Transaction) {
       
-      this.transactions.splice(id, 1);
+      //this.transactions.splice(id, 1);
     }
     
   
