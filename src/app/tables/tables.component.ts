@@ -26,7 +26,7 @@ edit(trans:ModelNS.Transaction)
   
 }
 remove(trans:ModelNS.Transaction) {
-      
+      this.us.deleteTransaction(trans);
       //this.transactions.splice(id, 1);
     }
     
