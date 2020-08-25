@@ -1,31 +1,45 @@
-<h1>Transactions</h1>
-<p *ngIf="!transactions"><em>Loading...</em></p>
-<table class='table'>
-  <thead>
-    <tr>
-      <th>Id</th>
-      <th>Date</th>
-      <!-- <th>Name</th> --> 
-      <th>Amount</th>
-      <th>Type</th>
-      <th>Description</th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody *ngIf="transactions">
-    <tr *ngFor="let tran of transactions">
-      <td>{{ tran.id }}</td>
-       <td>{{tran.date | date:"dd/mm/yyyy HH:mm"}}</td>
-      <!-- <td>{{ tran.user.name }}</td>  -->
-      <td (click)="edit(tran)">{{ tran.amount }}</td>
-      <td>{{ tran.type }}</td>
-      <td>{{ tran.description }}</td>
-       <td>
-       
-       <span class="table-remove">
-              <button type="button" class="btn btn-danger" (click)="remove(tran)">Remove</button>
-            </span></td>
-    </tr>
-  </tbody>
-</table>
+<section class="bg-primary">
 
+	<div class="row justify-content-center">
+		<div class="col-xl-10 col-lg-10 col-md-9">
+			<div class="card o-hidden border-0 shadow-lg my-5">
+				<div class="card-body p-5">
+					<div>
+						<h1>Transactions<span class="float-right"><button type="button" class="btn btn-primary" [routerLink]='["/transaction"]'style="margin:5px;">Add</button><button type="button" class="btn btn-primary" [routerLink]='["/home"]'style="margin:5px;">Back</button></span>
+						</h1>
+					</div>
+					<p *ngIf="!transactions"><em>Loading...</em></p>
+
+					<table class="table">
+						<thead>
+
+							<tr>
+								<th>Id</th>
+								<th>Date</th>
+								<!-- <th>Name</th> -->
+								<th>Amount</th>
+								<th>Type</th>
+								<th>Description</th>
+								<th></th>
+							</tr>
+						</thead>
+						<tbody *ngIf="transactions">
+							<tr *ngFor="let tran of transactions">
+								<td>{{ tran.id }}</td>
+								<td>{{tran.date | date:"dd/mm/yyyy HH:mm"}}</td>
+								<!-- <td>{{ tran.user.name }}</td>  -->
+								<td (click)="edit(tran)">{{ tran.amount }}</td>
+								<td>{{ tran.type }}</td>
+								<td>{{ tran.description }}</td>
+								<td>
+
+									<span class="table-remove">
+              <button type="button" class="btn btn-danger" (click)="remove(tran)">Delete</button>
+            </span></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
