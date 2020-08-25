@@ -11,8 +11,10 @@ import * as ModelNS from '../model/model';
 })
 export class TransactionComponent implements OnInit {
 public userService: any; 
+
 public trans:ModelNS.Transaction = new ModelNS.Transaction();
 public isEdit:boolean=false;
+
   constructor(private us: UserService, private router: Router, ) { 
         this.userService = this.us;
         if(this.userService.editTrans!=null )
