@@ -15,7 +15,7 @@
 									<h1 class="h4 text-gray-900 mb-4">New Transaction</h1>
 								</div>
 								<hr />
-							
+							<form class="user" #theForm="ngForm" novalidate>
 									<div class="form-group ">
 										<div class="input-group mb-3">
 											<input class="form-control" placeholder="Search..." name="Search" type="text" />
@@ -28,23 +28,25 @@
 									<div class="form-group text-center">
 										<label class="text-Dark"><b>Amount</b></label>
 										<div class="row justify-content-center">
-											<input type="text" name="Amount" [(ngModel)]="trans.amount" class="form-control" placeholder="Enter Amount...." />
+											<input type="text" name="Amount" [(ngModel)]="trans.amount" class="form-control" placeholder="Enter Amount...." #amount="ngModel" required />
                         </div>
+                        <div class="text-danger"
+											*ngIf="amount.touched && amount.errors.required">
+											Amount is required!</div>
 											<button type="submit" class="btn btn-circle bg-primary text-white" (click)="debit()">Debit</button>
 											<button type="submit" class="btn btn-circle bg-primary text-white" (click)="credit()">Credit</button>
 										</div>
 										<div class="form-group text-center">
-											<label class="text-dark"><b>Discription</b></label>
+											<label class="text-dark"><b>Description</b></label>
 											<div class="row justify-content-center">
 												<textarea [(ngModel)]="trans. description"  class="form-control" rows="3" placeholder="Optional"></textarea>
 											</div>
-											<button type="submit" class="btn btn-danger" (click)="cancel()" >Cancel</button>	<form class="user" (submit)="add()" #theForm="ngForm" novalidate>
-											<button type="submit" class="btn btn-primary" (click)="add()">Save</button>
-                      	</form>
+											<button type="submit" class="btn btn-danger" (click)="cancel()" >Cancel</button>	
+											<button type="submit" class="btn btn-primary" (click)="add()" [disabled]="theForm.invalid">Save</button>
+                      	
 										</div>
-                
-							
-							</div>
+							</form>
+              	</div>
 						</div>
 					</div>
 				</div>
