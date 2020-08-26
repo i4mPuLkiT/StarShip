@@ -37,7 +37,7 @@
 								<td>{{ tran.id }}</td>
 								<td>{{tran.date | date:"dd/mm/yyyy HH:mm"}}</td>
 								<!-- <td>{{ tran.user.name }}</td>  -->
-								<td (click)="edit(tran)">{{ tran.amount }}</td>
+								<td (click)="edit(tran)">{{ tran.amount| currency:"₹" }}</td>
 								<td>{{ tran.type }}</td>
 								<td>{{ tran.description }}</td>
 								<td>
