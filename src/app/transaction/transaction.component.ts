@@ -21,6 +21,7 @@ public isEdit:boolean=false;
         {
           this.isEdit=true;
           this.trans=this.userService.editTrans;
+
         }
 
   }
@@ -34,12 +35,14 @@ public isEdit:boolean=false;
       if(this.isEdit)
       {
         this.userService.editTransaction(this.trans);
+        this.router.navigate(["tables"]);
       }
       else
       {
         this.userService.newTransaction(this.trans);
+         this.router.navigate(["home"]);
+
       }
-       this.router.navigate(["home"]);
 
     }
     else{
