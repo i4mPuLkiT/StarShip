@@ -14,8 +14,7 @@
 								<div class="text-center">
 									<h1 class="h4 text-gray-900 mb-4">New Transaction</h1>
 								</div>
-								<hr />
-							<form class="user" #theForm="ngForm" novalidate>
+								<hr />							
 									<div class="form-group ">
 										<div class="input-group mb-3">
 											<input class="form-control" placeholder="Search..." name="Search" type="text" />
@@ -29,8 +28,7 @@
 										<label class="text-Dark"><b>Amount</b></label>
 										<div class="row justify-content-center">
 											<input type="number" name="Amount" [(ngModel)]="trans.amount" class="form-control" placeholder="Enter Amount...."/>
-                        </div>
-                        
+                        </div>                        
 											<button type="submit" class="btn btn-circle bg-primary text-white" (click)="debit()">Debit</button>
 											<button type="submit" class="btn btn-circle bg-primary text-white" (click)="credit()">Credit</button>
 										</div>
@@ -43,7 +41,6 @@
 											<button type="submit" class="btn btn-primary" (click)="add()">Save</button>
                       	
 										</div>
-							</form>
               	</div>
 						</div>
 					</div>
