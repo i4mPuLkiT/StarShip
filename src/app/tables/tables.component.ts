@@ -35,7 +35,7 @@ remove(trans:ModelNS.Transaction) {
     }
  search()
   {
- this.transactions = this.us.transactions.filter(i => i.clientName == this.searchKey || i.clientame == this.searchKey);
+ this.transactions = this.us.transactions.filter(i => i.clientName == this.searchKey || i.clientPhone == this.searchKey );
   }
   
 
