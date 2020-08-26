@@ -11,7 +11,7 @@ import * as ModelNS from '../model/model';
 })
 export class TransactionComponent implements OnInit {
 public userService: any; 
-
+public searchKey:string;
 public trans:ModelNS.Transaction = new ModelNS.Transaction();
 public isEdit:boolean=false;
 
@@ -73,5 +73,9 @@ public isEdit:boolean=false;
     this.trans.type = "Cr";
         // alert(this.trans.type )
 
+  }
+  search()
+  {
+    this.userService.search(this.searchKey);
   }
 }

@@ -24,7 +24,9 @@
 
 							<tr>
 								<th>Id</th>
-								<th>Date</th>
+                <th>Date</th>
+                <th>Name</th>
+                <th>Phone</th>								
 								<!-- <th>Name</th> -->
 								<th>Amount</th>
 								<th>Type</th>
@@ -35,7 +37,9 @@
 						<tbody *ngIf="transactions">
 							<tr *ngFor="let tran of transactions">
 								<td>{{ tran.id }}</td>
-								<td>{{tran.date | date:"dd/mm/yyyy hh:mm a"}}</td>
+               	<td>{{tran.date | date:"dd/mm/yyyy hh:mm a"}}</td>
+                <td>{{ tran.clientName }}</td>
+                <td>{{ tran.clientPhone }}</td>							
 								<!-- <td>{{ tran.user.name }}</td>  -->
 								<td (click)="edit(tran)">{{ tran.amount| currency:"₹" }}</td>
 								<td>{{ tran.type }}</td>

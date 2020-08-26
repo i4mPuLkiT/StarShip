@@ -95,7 +95,11 @@ public transactions:Array<ModelNS.Transaction>=new Array<ModelNS.Transaction>();
       }
     } 
 }
-
+ search(searchKey:string)
+  {
+    
+    alert(searchKey);
+  }
   public admin:ModelNS.Appuser = 
          {
         "id": 1,
