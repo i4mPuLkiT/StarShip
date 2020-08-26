@@ -10,6 +10,9 @@ import * as ModelNS from '../model/model';
   styleUrls: ['./tables.component.css']
 })
 export class TablesComponent implements OnInit {
+  public searchKey:string;
+public userService: any; 
+
  public transactions:Array<ModelNS.Transaction>=new Array<ModelNS.Transaction>();
 
 ngOnInit() {
@@ -17,6 +20,7 @@ ngOnInit() {
   
    constructor(private us: UserService, private router: Router){
        this.transactions = this.us.transactions;
+       this.userService = this.us;
        
    }
 edit(trans:ModelNS.Transaction)
@@ -29,7 +33,10 @@ remove(trans:ModelNS.Transaction) {
       this.us.deleteTransaction(trans);
       //this.transactions.splice(id, 1);
     }
-    
+ search()
+  {
+ this.transactions = this.us.transactions.filter(i => i.clientName == this.searchKey || i.clientame == this.searchKey);
+  }
   
 
 }
