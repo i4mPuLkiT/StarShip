@@ -35,7 +35,8 @@ let routes = [
      { path: "tables", component: TablesComponent },
       { path: "summary", component: SummaryComponent },
       { path: "transaction", component: TransactionComponent },
-    
+      { path: "test", component: TestComponent },
+
    
 ];
 

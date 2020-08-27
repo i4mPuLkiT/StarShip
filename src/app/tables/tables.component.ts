@@ -40,8 +40,7 @@ remove(trans:ModelNS.Transaction) {
   }
   
 onKey(event: any) { // without type info
-    alert(event.target.value);
-    this.values += event.target.value + ' | ';
+    this.searchKey = event.target.value;
     this.search();
   }
 
