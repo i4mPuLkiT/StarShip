@@ -20,6 +20,7 @@ import { TransactionComponent } from './transaction/transaction.component';
  import { ChartsModule } from 'ng2-charts/ng2-charts';
 import { DataServiceService } from './data-service.service';
 import { UserService } from './user.service';
+import { TestComponent } from './test/test.component';
 
 
 let routes = [
@@ -47,7 +48,7 @@ let routes = [
       })
 
    ],
-  declarations: [ AppComponent, HelloComponent, SignupComponent, HomeComponent, MenuComponent, LoginComponent, LayoutComponent, AccountmanagerComponent, ForgotpasswordComponent, TablesComponent, NavMenuComponent, HeaderComponent, FooterComponent, SummaryComponent, TransactionComponent,   ],
+  declarations: [ AppComponent, HelloComponent, SignupComponent, HomeComponent, MenuComponent, LoginComponent, LayoutComponent, AccountmanagerComponent, ForgotpasswordComponent, TablesComponent, NavMenuComponent, HeaderComponent, FooterComponent, SummaryComponent, TransactionComponent, TestComponent,   ],
   bootstrap:    [ AppComponent ],
   providers: [DataServiceService, UserService]
 })
