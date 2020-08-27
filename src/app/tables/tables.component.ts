@@ -36,7 +36,7 @@ remove(trans:ModelNS.Transaction) {
     }
  search()
   {
- this.transactions = this.us.transactions.filter(i => i.clientName.indexOf(this.searchKey)> -1 || i.clientPhone.indexOf(this.searchKey) > -1 );
+ this.transactions = this.us.transactions.filter(i => i.clientName.indexOf(this.searchKey) > -1 || i.clientPhone.indexOf(this.searchKey) > -1 );
   }
   
 onKey(event: any) { // without type info

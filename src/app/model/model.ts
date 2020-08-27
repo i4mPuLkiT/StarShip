@@ -14,5 +14,10 @@ export class Transaction {
    description: string;
    clientName : string;
    clientPhone:string;
-   user: Appuser;
+   user: Client;
+}
+export class Client {
+   id: number;
+    name: string;
+    phone: string;
 }
