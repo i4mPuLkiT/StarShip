@@ -45,8 +45,8 @@ body {
     margin: 5px;
 }
 
-.form-group input[type=text] {
-    width: 10px;
+.form-row input[type=text]{
+   
     font-size: 1rem;
     border-radius: 1.35rem;
 
