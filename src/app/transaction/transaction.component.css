@@ -46,7 +46,10 @@ body {
 }
 
 .form-group input[type=text] {
-    width: 150px;
+    width: 10px;
+    font-size: 1rem;
+    border-radius: 1.35rem;
+
 }
 
 .form-group button[type=button] {
