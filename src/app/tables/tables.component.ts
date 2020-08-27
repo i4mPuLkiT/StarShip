@@ -11,6 +11,7 @@ import * as ModelNS from '../model/model';
 })
 export class TablesComponent implements OnInit {
   public searchKey:string;
+  public   values = '';
 public userService: any; 
 
  public transactions:Array<ModelNS.Transaction>=new Array<ModelNS.Transaction>();
@@ -38,5 +39,11 @@ remove(trans:ModelNS.Transaction) {
  this.transactions = this.us.transactions.filter(i => i.clientName == this.searchKey || i.clientPhone == this.searchKey );
   }
   
+onKey(event: any) { // without type info
+    alert(event.target.value);
+    this.values += event.target.value + ' | ';
+    this.search();
+  }
+
 
 }

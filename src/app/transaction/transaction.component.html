@@ -14,48 +14,48 @@
 								<div class="text-center">
 									<h1 class="h4 text-gray-900 mb-4">New Transaction</h1>
 								</div>
-								<hr />							
-									<div class="form-group ">
-										<div class="input-group mb-3">
-											<input class="form-control" placeholder="Search..." name="searchKey"[(ngModel)]="searchKey" />
-											<div class="input-group-append">
-												<button class="btn btn-primary" type="button" (click)="search()">Search</button>
+								<hr />
+								<div class="form-group ">
+									<div class="input-group mb-3">
+										<input class="form-control" placeholder="Search..." name="searchKey"[(ngModel)]="searchKey" />
+										<div class="input-group-append">
+											<button class="btn btn-primary" type="button" (click)="search()" >Search</button>
+										</div>
+									</div>
+								</div>
+								<div class="form-row">
+									<div class="col">
+										<label class="text-dark"><b>Client Name</b></label>
+										<input type="text" class="form-control" placeholder="Enter Name" name="clientName"  [(ngModel)]="trans.clientName">
+                                        </div>
+										<div class="col">
+											<label class="text-dark"><b>Phone</b></label>
+											<input type="text" class="form-control" placeholder="Enter Number" name="clientPhone" [(ngModel)]="trans.clientPhone" >
+                                        </div>
+										</div>
+										<div class="form-group text-center">
+											<label class="text-Dark"><b>Amount</b></label>
+											<div class="row justify-content-center">
+												<input type="number" name="Amount" [(ngModel)]="trans.amount" class="form-control" placeholder="Enter Amount...."/>
+                        </div>
+												<button type="submit" class="btn btn-circle bg-primary text-white" (click)="debit()">Debit</button>
+												<button type="submit" class="btn btn-circle bg-primary text-white" (click)="credit()">Credit</button>
+											</div>
+											<div class="form-group text-center">
+												<label class="text-dark"><b>Description</b></label>
+												<div class="row justify-content-center">
+													<textarea [(ngModel)]="trans. description"  class="form-control" rows="3" placeholder="Optional"></textarea>
+												</div>
+												<button type="submit" class="btn btn-danger" (click)="cancel()" >Cancel</button>
+												<button type="submit" class="btn btn-primary" (click)="add()">Save</button>
+
 											</div>
 										</div>
 									</div>
-                    <div class="form-row">
-                                        <div class="col">
-                                            <label class="text-dark"><b>Client Nam</b></label>
-                                            <input type="text" class="form-control" placeholder="Enter Name">
-                                        </div>
-                                        <div class="col">
-                                            <label class="text-dark"><b>Phone</b></label>
-                                            <input type="text" class="form-control" placeholder="Enter Number">
-                                        </div>
-                                    </div>
-									<div class="form-group text-center">
-										<label class="text-Dark"><b>Amount</b></label>
-										<div class="row justify-content-center">
-											<input type="number" name="Amount" [(ngModel)]="trans.amount" class="form-control" placeholder="Enter Amount...."/>
-                        </div>                        
-											<button type="submit" class="btn btn-circle bg-primary text-white" (click)="debit()">Debit</button>
-											<button type="submit" class="btn btn-circle bg-primary text-white" (click)="credit()">Credit</button>
-										</div>
-										<div class="form-group text-center">
-											<label class="text-dark"><b>Description</b></label>
-											<div class="row justify-content-center">
-												<textarea [(ngModel)]="trans. description"  class="form-control" rows="3" placeholder="Optional"></textarea>
-											</div>
-											<button type="submit" class="btn btn-danger" (click)="cancel()" >Cancel</button>	
-											<button type="submit" class="btn btn-primary" (click)="add()">Save</button>
-                      	
-										</div>
-              	</div>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-		</div>
-	</div>
 
-</div>
+			</div>

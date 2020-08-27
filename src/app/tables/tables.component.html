@@ -9,7 +9,7 @@
 										<div class="input-group mb-3">
 											<input class="form-control" placeholder="Search transactions..." name="searchKey" type="text" [(ngModel)]="searchKey"/>
 											<div class="input-group-append">
-												<button class="btn btn-primary" type="button" (click)="search()">Search</button>
+												<button class="btn btn-primary" type="button" (click)="search()" (keyup)="onKey($event)">Search</button>
 											</div>
 										</div>
 									</div>
