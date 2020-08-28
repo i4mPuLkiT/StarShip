@@ -12,7 +12,25 @@ public clients:Array<ModelNS.Client>=new Array<ModelNS.Client>();
 
 addNewClient(client:ModelNS.Client):ModelNS.Client
  {
-    client.id=1;
+   if(this.clients!=null)
+   {
+    let cl:Array<ModelNS.Client>=this.clients.filter(i=>i.name==client.name && i.phone==client.phone);
+
+   if(cl!=null && cl.length == 0)
+   {
+   if(this.clients.length>0)
+    {
+      client.id=this.clients[this.clients.length-1].id + 1;
+    }
+    else
+    {
+      client.id=1;
+    }
+   console.log(client.id + '    ' +client.name + '    '+ client.phone);
+   this.clients.push(client);
+   }
+   
+   }
    return client;
  }
 
