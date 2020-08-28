@@ -17,6 +17,7 @@ export class ClientlistComponent implements OnInit {
     constructor(private us: UserService, private router: Router) {
    
     this.userService = this.us;
+    this.clients = this.us.clients
    }
 
   ngOnInit() {
