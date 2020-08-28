@@ -10,6 +10,16 @@ public editTrans:ModelNS.Transaction;
 public transactions:Array<ModelNS.Transaction>=new Array<ModelNS.Transaction>();
 public clients:Array<ModelNS.Client>=new Array<ModelNS.Client>();
 
+addNewClient(client:ModelNS.Client):ModelNS.Client
+ {
+    client.id=1;
+   return client;
+ }
+
+ getClient()
+ {
+
+ }
   public newTransaction(trans:ModelNS.Transaction){
     this.editTrans=null;
     //alert(Math.max(...this.transactions.map(o => o.id), 1));
@@ -111,6 +121,6 @@ public clients:Array<ModelNS.Client>=new Array<ModelNS.Client>();
         "password":"1",
         "isAuthenticate": true
          }
- 
+
  
 }

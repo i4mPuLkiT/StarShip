@@ -12,7 +12,8 @@ import * as ModelNS from '../model/model';
 export class TransactionComponent implements OnInit {
 public userService: any; 
 public searchKey:string;
-  public   values = '';
+public   values = '';
+public client:ModelNS.Client=new ModelNS.Client();
 
 public trans:ModelNS.Transaction = new ModelNS.Transaction();
 public clients:Array<ModelNS.Client>=new Array<ModelNS.Client>();
@@ -20,6 +21,7 @@ public isEdit:boolean=false;
 
   constructor(private us: UserService, private router: Router, ) { 
         this.userService = this.us;
+        
         
         if(this.userService.editTrans!=null )
         {
@@ -43,6 +45,8 @@ public isEdit:boolean=false;
       }
       else
       {
+        this.client=this.userService.addNewClient(this.client);
+        this.trans.user = this.client;
         this.userService.newTransaction(this.trans);
          this.router.navigate(["home"]);
 
