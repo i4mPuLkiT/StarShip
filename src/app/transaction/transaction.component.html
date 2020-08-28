@@ -17,7 +17,7 @@
 								<hr />
 								<div class="form-group ">
 									<div class="input-group mb-3">
-										<input class="form-control" placeholder="Search..." name="searchKey"[(ngModel)]="searchKey" />
+										<input class="form-control" placeholder="Search..." name="searchKey"[(ngModel)]="searchKey" (keyup)="onKey($event)"/>
 										<div class="input-group-append">
 											<button class="btn btn-primary" type="button" (click)="search()" >Search</button>
 										</div>

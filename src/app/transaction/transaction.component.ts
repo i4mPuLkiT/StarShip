@@ -12,11 +12,15 @@ import * as ModelNS from '../model/model';
 export class TransactionComponent implements OnInit {
 public userService: any; 
 public searchKey:string;
+  public   values = '';
+
 public trans:ModelNS.Transaction = new ModelNS.Transaction();
+public clients:Array<ModelNS.Client>=new Array<ModelNS.Client>();
 public isEdit:boolean=false;
 
   constructor(private us: UserService, private router: Router, ) { 
         this.userService = this.us;
+        
         if(this.userService.editTrans!=null )
         {
           this.isEdit=true;
@@ -76,6 +80,11 @@ public isEdit:boolean=false;
   }
   search()
   {
-    this.userService.search(this.searchKey);
+ this.clients = this.us.clients.filter(i => i.name.indexOf(this.searchKey) > -1 || i.hone.indexOf(this.searchKey) > -1 );
+  }
+
+  onKey(event: any) { // without type info
+    this.searchKey = event.target.value;
+    this.search();
   }
 }
