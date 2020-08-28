@@ -12,8 +12,6 @@ export class Transaction {
    amount: number;
    type: string;
    description: string;
-   clientName : string;
-   clientPhone:string;
    user: Client;
 }
 export class Client {

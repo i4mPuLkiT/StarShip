@@ -38,6 +38,7 @@ public isEdit:boolean=false;
   add(){
     if(    this.us.admin.isAuthenticate ==  true )
     {
+
       if(this.isEdit)
       {
         this.userService.editTransaction(this.trans);
