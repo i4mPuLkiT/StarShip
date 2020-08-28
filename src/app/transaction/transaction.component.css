@@ -54,7 +54,10 @@ body {
 .form-group button[type=button] {
     margin: 0px;
 }
- div > name
- {
-width:50%;
- }
+input[name="Amount"] {
+  width:50%;
+  border-radius: 1.35rem;
+  line-height: 1.5;
+
+}
+
