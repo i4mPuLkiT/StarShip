@@ -22,6 +22,7 @@ import { DataServiceService } from './data-service.service';
 import { UserService } from './user.service';
 import { TestComponent } from './test/test.component';
 import { ClientComponent } from './client/client.component';
+import { ClientlistComponent } from './clientlist/clientlist.component';
 
 
 let routes = [
@@ -50,7 +51,7 @@ let routes = [
       })
 
    ],
-  declarations: [ AppComponent, HelloComponent, SignupComponent, HomeComponent, MenuComponent, LoginComponent, LayoutComponent, AccountmanagerComponent, ForgotpasswordComponent, TablesComponent, NavMenuComponent, HeaderComponent, FooterComponent, SummaryComponent, TransactionComponent, TestComponent, ClientComponent,   ],
+  declarations: [ AppComponent, HelloComponent, SignupComponent, HomeComponent, MenuComponent, LoginComponent, LayoutComponent, AccountmanagerComponent, ForgotpasswordComponent, TablesComponent, NavMenuComponent, HeaderComponent, FooterComponent, SummaryComponent, TransactionComponent, TestComponent, ClientComponent, ClientlistComponent,   ],
   bootstrap:    [ AppComponent ],
   providers: [DataServiceService, UserService]
 })
