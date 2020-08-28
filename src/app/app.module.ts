@@ -38,6 +38,7 @@ let routes = [
       { path: "summary", component: SummaryComponent },
       { path: "transaction", component: TransactionComponent },
       { path: "test", component: TestComponent },
+      { path: "clientlist", component: ClientlistComponent },
 
    
 ];
