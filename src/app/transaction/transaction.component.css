@@ -54,4 +54,7 @@ body {
 .form-group button[type=button] {
     margin: 0px;
 }
-
+ div > name
+ {
+width:50%;
+ }

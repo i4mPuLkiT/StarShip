@@ -8,6 +8,8 @@ export class UserService {
   constructor() {   }
 public editTrans:ModelNS.Transaction;
 public transactions:Array<ModelNS.Transaction>=new Array<ModelNS.Transaction>();
+public clients:Array<ModelNS.Client>=new Array<ModelNS.Client>();
+
   public newTransaction(trans:ModelNS.Transaction){
     this.editTrans=null;
     //alert(Math.max(...this.transactions.map(o => o.id), 1));
