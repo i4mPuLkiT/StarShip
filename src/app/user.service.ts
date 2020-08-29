@@ -161,7 +161,9 @@ editClient(client:ModelNS.Client){
         "email": "admin@brolia.com",
         "phone": "1",
         "password":"1",
-        "isAuthenticate": true
+        "isAuthenticate": true,
+        "accountType":1,
+        "userType":1
          }
 
  

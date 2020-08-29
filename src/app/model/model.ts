@@ -5,6 +5,8 @@ export class Appuser {
     phone: string;
     password: string;
     isAuthenticate: boolean;
+    accountType:number;
+    userType:number;
 }
 export class Transaction {
    id: number;
