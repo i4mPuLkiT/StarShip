@@ -25,3 +25,8 @@ table.dataTable {
 .table-bordered {
     border: 1px solid #e3e6f0;
 }
+tr {
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+}
