@@ -20,9 +20,7 @@
 										<input type="email" name="username" class="form-control form-control-user" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Username(Email Address/Phone No.)" [(ngModel)]="creds.username" #username="ngModel" required >
                                         </div>
 
-										<div class="text-danger"
-											*ngIf="username.touched && username.invalid && username.errors.required">
-											Username is required!</div>
+
 										<div class="form-group">
 											<input type="password" name="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Password" [(ngModel)]="creds.password" #password="ngModel"  required>
                                         </div>
