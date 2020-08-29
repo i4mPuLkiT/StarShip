@@ -33,6 +33,27 @@ addNewClient(client:ModelNS.Client):ModelNS.Client
    }
    return client;
  }
+ deleteClient(client:ModelNS.Client){
+    if(this.clients.length>0)
+    {
+      //TODO = optimization required
+      for (var i in this.clients) {
+      if (this.clients[i].id == client.id) {
+        this.clients.splice(Number(i),1);
+        break; //Stop this loop, we found it!
+     }
+      }
+    } 
+}
+editClient(client:ModelNS.Client){
+    if(this.clients.length>0)
+    {
+      //TODO = optimization required
+         this.clients.find(f=>f.id==client.id).name=client.name;
+         this.clients.find(f=>f.id==client.id).phone=client.phone;
+         
+    } 
+}
 
  getClient()
  {

@@ -20,7 +20,7 @@
 					</div>
 					<p *ngIf="!transactions"><em>Loading...</em></p>
           
-					<table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+					<table class="table">
 						<thead>
 
 							<tr>
@@ -42,10 +42,10 @@
                 <td>{{ tran.user.name }}</td>
                 <td>{{ tran.user.phone }}</td>							
 								<!-- <td>{{ tran.user.name }}</td>  -->
-								<td (click)="edit(tran)">{{ tran.amount| currency:"₹" }}</td>
+								<td (click)="edit(tran)">{{ tran.amount| currency:'INR':true }}</td>
 								<td>{{ tran.type }}</td>
 								<td>{{ tran.description }}</td>
-								<
+								<td>
 
 									<span class="table-remove">
               <button type="button" class="btn btn-danger" (click)="remove(tran)">Delete</button>

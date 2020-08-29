@@ -23,14 +23,15 @@ export class ClientlistComponent implements OnInit {
 
   ngOnInit() {
   }
-editClient(client:ModelNS.Client)
+
+ edit(clients:ModelNS.Client)
 {
-  // this.us.edit(clien);
-  // this.router.navigate(["transaction"]);
+  this.us.editClient(clients);
+  this.router.navigate(["transaction"]);
   
 }
-removeClient(client:ModelNS.Client) {
-      // this.us.deleteTransaction(trans);
+remove(clients:ModelNS.Client) {
+      this.us.deleteClient(clients);
       //this.transactions.splice(id, 1);
     }
  searchClient()
