@@ -83,13 +83,13 @@ public isEdit:boolean=false;
         // alert(this.trans.type )
 
   }
-  search()
+  searchTransaction()
   {
  this.clients = this.us.clients.filter(i => i.name.indexOf(this.searchKey) > -1 || i.phone.indexOf(this.searchKey) > -1 );
   }
 
   onKey(event: any) { // without type info
     this.searchKey = event.target.value;
-    this.search();
+    this.searchTransaction();
   }
 }
