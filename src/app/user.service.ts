@@ -45,6 +45,7 @@ addNewClient(client:ModelNS.Client):ModelNS.Client
       }
     } 
 }
+public clientEdit:ModelNS.Client=new ModelNS.Client();
 editClient(client:ModelNS.Client){
     if(this.clients.length>0)
     {

@@ -16,7 +16,7 @@
 
 						<h1>Client List
               <span class="float-right">
-                <button type="button" class="btn btn-primary" [routerLink]='["/transaction"]'style="margin:5px;">Add</button>
+                <button type="button" class="btn btn-primary" [routerLink]='["/client"]'style="margin:5px;">Add</button>
                 </span>
 						</h1>
 					</div>
@@ -35,8 +35,12 @@
 						<tbody *ngIf="clients">
 							<tr *ngFor="let client of clients">
 								<td>{{ client.id }}</td>
-                <td>{{ client.name }}</td>
-                <td>{{ client.phone }}</td>							
+                <td (click)="edit(client)">{{ client.name }}</td>
+                <td (click)="edit(client)">{{ client.phone }}</td>							<td>
+
+									<span class="table-remove">
+              <button type="button" class="btn btn-danger" (click)="remove(client)">Delete</button>
+            </span></td>
 							</tr>
 						</tbody>
 					</table>

@@ -24,10 +24,10 @@ export class ClientlistComponent implements OnInit {
   ngOnInit() {
   }
 
- edit(clients:ModelNS.Client)
+ edit(client:ModelNS.Client)
 {
-  this.us.editClient(clients);
-  this.router.navigate(["transaction"]);
+  this.userService.clientEdit=client;
+  this.router.navigate(["client"]);
   
 }
 remove(clients:ModelNS.Client) {
