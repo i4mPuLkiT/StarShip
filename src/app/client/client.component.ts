@@ -15,6 +15,7 @@ export class ClientComponent implements OnInit {
  public isEdit:boolean=false;
 
   constructor(private us: UserService, private router: Router) { this.userService = this.us;
+  this.isEdit=false;
   if(this.userService.clientEdit!=null)
   {
     this.isEdit=true;
@@ -35,6 +36,7 @@ save()
   {
         this.userService.clientEdit=null;
         this.userService.addNewClient(this.client);
+
   }
 this.router.navigate(["clientlist"]);
   

@@ -12,8 +12,10 @@ public clients:Array<ModelNS.Client>=new Array<ModelNS.Client>();
 
 addNewClient(client:ModelNS.Client):ModelNS.Client
  {
+   this.clientEdit=null;
    if(this.clients!=null)
    {
+
     let cl:Array<ModelNS.Client>=this.clients.filter(i=>i.name==client.name && i.phone==client.phone);
 
    if(cl!=null && cl.length == 0)
@@ -45,7 +47,7 @@ addNewClient(client:ModelNS.Client):ModelNS.Client
       }
     } 
 }
-public clientEdit:ModelNS.Client=new ModelNS.Client();
+public clientEdit:ModelNS.Client=null;
 editClient(client:ModelNS.Client){
     if(this.clients.length>0)
     {
