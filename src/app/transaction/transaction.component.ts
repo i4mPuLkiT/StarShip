@@ -35,7 +35,7 @@ public isEdit:boolean=false;
   ngOnInit() {  
 
   }
-  add(){
+  addTransaction(){
     if(    this.us.admin.isAuthenticate ==  true )
     {
 

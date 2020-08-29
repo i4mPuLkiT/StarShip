@@ -13,6 +13,7 @@ export class ClientlistComponent implements OnInit {
   public searchKey:string;
   public   values = '';
   public userService: any; 
+  
   public clients:Array<ModelNS.Client>=new Array<ModelNS.Client>();
     constructor(private us: UserService, private router: Router) {
    
@@ -32,13 +33,13 @@ removeClient(client:ModelNS.Client) {
       // this.us.deleteTransaction(trans);
       //this.transactions.splice(id, 1);
     }
- search()
+ searchClient()
   {
  this.clients = this.us.clients.filter(i => i.name.indexOf(this.searchKey) > -1 || i.phone.indexOf(this.searchKey) > -1 );
   }
   
 onKey(event: any) { // without type info
     this.searchKey = event.target.value;
-    this.search();
+    this.searchClient();
   }
 }
