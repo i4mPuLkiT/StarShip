@@ -8,53 +8,49 @@
 			<div class="card o-hidden border-0 shadow-lg my-5">
 				<div class="card-body p-5">
 					<!-- Nested Row within Card Body -->
-					<div class="row">
-						<!-- Login form creation starts-->
-						<div class="container-fluid">
-							<!-- row and justify-content-center class is used to place the form in center -->
-							<div class="row justify-content-center">
-								<div class="col-12 col-lg-8">
-									<div class="p-5">
-										<form class="user">
-											<div class="form-row">
+					<div class="row justify-content-center">
+						<div class="col-12 col-lg-8">
+							<div class="p-5">
+								<form class="user">
+										<div class="form-group">
+											<label class="text-dark"><b>Name</b></label>
+											<input type="text" class="form-control form-control-user" placeholder="Enter Name" name="userName"  [(ngModel)]="user.name">
+                                        </div>
+											<div class="form-group">
+												<label class="text-dark"><b>Phone</b></label>
+												<input type="text" class="form-control form-control-user" placeholder="Enter Number" name="userPhone" [(ngModel)]="user.phone" >
+                                        </div>
 												<div class="form-group">
-													<label class="text-dark"><b>Name</b></label>
-													<input type="text" class="form-control" placeholder="Enter Name" name="userName"  [(ngModel)]="user.name">
+													<label class="text-dark"><b>Email</b></label>
+													<input type="email" class="form-control form-control-user" placeholder="Enter email" name="userEmail"  [(ngModel)]="user.email">
                                         </div>
 													<div class="form-group">
-														<label class="text-dark"><b>Phone</b></label>
-														<input type="text" class="form-control" placeholder="Enter Number" name="userPhone" [(ngModel)]="user.phone" >
+														<label class="text-dark"><b>Account Type</b></label>
+														<input type="text" class="form-control form-control-user" placeholder="Type" name="usertype"  [(ngModel)]="user.accountType">
                                         </div>
-                                        <div class="form-group">
-													<label class="text-dark"><b>Email</b></label>
-													<input type="email" class="form-control" placeholder="Enter email" name="userEmail"  [(ngModel)]="user.email">
+														<div class="form-group">
+															<label class="text-dark"><b>User Type</b></label>
+															<input type="text" class="form-control form-control-user" placeholder="Type" name="usertype"  [(ngModel)]="user.userType">
                                         </div>
-                             <div class="form-group">
-													<label class="text-dark"><b>Account Type</b></label>
-													<input type="text" class="form-control" placeholder="Type" name="usertype"  [(ngModel)]="user.accountType">
-                                        </div>   
-                                         <div class="form-group">
-													<label class="text-dark"><b>User Type</b></label>
-													<input type="te" class="form-control" placeholder="Type" name="usertype"  [(ngModel)]="user.userType">
-                                        </div>         
-														<div class="row">
-															<div class="form-group">
-																<button type="submit" class="btn btn-danger" (click)="cancel()" >Cancel</button>
-															</div>
-															<div class="form-group">
-																<button type="submit" class="btn btn-primary" (click)="saveUser()">Save</button>
-															</div>
+															                            	<div class="row">
+														<div class="form-group col-sm- mb-3 mb-sm-0">
+															<button type="submit" class="btn btn-danger btn-block"[routerLink]='["/"]'>Cancel</button>
+														</div>
+														<div class="form-group col-sm-6 mb-3 mb-sm-0 ">
+															<button type="submit" class="btn btn-primary btn-block" (click)="saveUser()" >Save</button>
 														</div>
 													</div>
-										</form>
-									</div>
-								</div>
-							</div>
+														
 
+								</form>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
+
 		</div>
+
 	</div>
+
 </div>
