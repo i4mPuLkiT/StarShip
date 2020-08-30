@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from '../user.service';
 import { Router } from '@angular/router';
+import * as ModelNS from '../model/model';
 
 
 @Component({
@@ -10,17 +11,24 @@ import { Router } from '@angular/router';
 })
 export class SignupComponent implements OnInit {
 public userService: any;
-public creds={
-    name:"",
-    username:"",
-    password:""
-};
+// public creds={
+//     name:"",
+//     username:"",
+//     password:""
+// };
+public user:ModelNS.Appuser = new ModelNS.Appuser();
+
   constructor(private us: UserService, private router: Router ) { 
         this.userService = this.us;
 
   }
 
-  ngOnInit() {
-  }
+  ngOnInit() {  }
 
+registerUser()
+{
+        this.userService.AddnewUser(this.user);
+         this.router.navigate(["userlist"]);
+
+}
 }
