@@ -24,6 +24,7 @@ import { TestComponent } from './test/test.component';
 import { ClientComponent } from './client/client.component';
 import { ClientlistComponent } from './clientlist/clientlist.component';
 import { UserlistComponent } from './userlist/userlist.component';
+import { UserComponent } from './user/user.component';
 
 
 let routes = [
@@ -55,7 +56,7 @@ let routes = [
       })
 
    ],
-  declarations: [ AppComponent, HelloComponent, SignupComponent, HomeComponent, MenuComponent, LoginComponent, LayoutComponent, AccountmanagerComponent, ForgotpasswordComponent, TablesComponent, NavMenuComponent, HeaderComponent, FooterComponent, SummaryComponent, TransactionComponent, TestComponent, ClientComponent, ClientlistComponent, UserlistComponent,   ],
+  declarations: [ AppComponent, HelloComponent, SignupComponent, HomeComponent, MenuComponent, LoginComponent, LayoutComponent, AccountmanagerComponent, ForgotpasswordComponent, TablesComponent, NavMenuComponent, HeaderComponent, FooterComponent, SummaryComponent, TransactionComponent, TestComponent, ClientComponent, ClientlistComponent, UserlistComponent, UserComponent,   ],
   bootstrap:    [ AppComponent ],
   providers: [DataServiceService, UserService]
 })

@@ -7,8 +7,11 @@ import * as _ from "lodash";
 export class UserService {
   constructor() {   }
 public editTrans:ModelNS.Transaction;
+public editappUser:ModelNS.Appuser;
 public transactions:Array<ModelNS.Transaction>=new Array<ModelNS.Transaction>();
 public clients:Array<ModelNS.Client>=new Array<ModelNS.Client>();
+public appusers:Array<ModelNS.Appuser>=new Array<ModelNS.Appuser>();
+
 
 addNewClient(client:ModelNS.Client):ModelNS.Client
  {
@@ -58,10 +61,7 @@ editClient(client:ModelNS.Client){
     } 
 }
 
- getClient()
- {
 
- }
   public newTransaction(trans:ModelNS.Transaction){
     this.editTrans=null;
     //alert(Math.max(...this.transactions.map(o => o.id), 1));
@@ -78,6 +78,7 @@ editClient(client:ModelNS.Client){
 
     this.transactions.push(trans);
   }
+
   get getTotalDebit():number
   {
     if(this.transactions.length >0 && this.transactions.find(itm=>itm.type=="Dr"))
@@ -166,5 +167,31 @@ editClient(client:ModelNS.Client){
         "userType":1
          }
 
+AddnewUser(user:ModelNS.Appuser)
+{
+  this.appuserEdit = null;
+  if(this.appusers !=null)
+  {
+    let ul:Array<ModelNS.Appuser> = this.appusers.filter(i=>i.name == user.name && i.phone == user.phone);
+     if(ul!=null && ul.length == 0)
+   {
+   if(this.appusers.length>0)
+    {
+      user.id =this.appusers[this.appusers.length-1].id + 1;
+    }
+    else 
+    {
+      user.id = 1;
+    }
+       this.appusers.push(user);
+   }
+  }
+     return user;
+
+}
+
+appuserEdit(user:ModelNS.Appuser){
+    
+}
  
 }
