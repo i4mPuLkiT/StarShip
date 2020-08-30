@@ -7,7 +7,7 @@ import * as _ from "lodash";
 export class UserService {
   constructor() {   }
 public editTrans:ModelNS.Transaction;
-public editappUser:ModelNS.Appuser;
+public editappUser:ModelNS.Appuser = null;
 public transactions:Array<ModelNS.Transaction>=new Array<ModelNS.Transaction>();
 public clients:Array<ModelNS.Client>=new Array<ModelNS.Client>();
 public appusers:Array<ModelNS.Appuser>=new Array<ModelNS.Appuser>();
@@ -192,7 +192,30 @@ AddnewUser(user:ModelNS.Appuser)
 
 appuserEdit(user:ModelNS.Appuser)
 {
-    
+    if(this.appusers.length>0)
+    {
+      //TODO = optimization required
+         this.appusers.find(i=>i.id== user.id).name= user.name;
+         this.appusers.find(i=>i.id== user.id).email=user.email;
+         this.appusers.find(i=>i.id== user.id).phone=user.phone;
+         this.appusers.find(i=>i.id== user.id).accountType=user.accountType;
+         this.appusers.find(i=>i.id== user.id).userType=user.userType;
+         
+         
+    } 
 }
  
+  deleteAppUser(user:ModelNS.Appuser){
+    if(this.appusers.length>0)
+    {
+      //TODO = optimization required
+      for (var i in this.appusers) {
+      if (this.appusers[i].id == user.id) {
+        this.appusers.splice(Number(i),1);
+        break; //Stop this loop, we found it!
+     }
+      }
+    } 
+}
+
 }

@@ -31,12 +31,12 @@ export class ClientlistComponent implements OnInit {
   
 }
 remove(clients:ModelNS.Client) {
-      this.us.deleteClient(clients);
+      this.userService.deleteClient(clients);
       //this.transactions.splice(id, 1);
     }
  searchClient()
   {
- this.clients = this.us.clients.filter(i => i.name.indexOf(this.searchKey) > -1 || i.phone.indexOf(this.searchKey) > -1 );
+ this.clients = this.userService.clients.filter(i => i.name.indexOf(this.searchKey) > -1 || i.phone.indexOf(this.searchKey) > -1 );
   }
   
 onKey(event: any) { // without type info

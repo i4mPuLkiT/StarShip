@@ -30,4 +30,14 @@ onKey(event: any) { // without type info
     this.searchKey = event.target.value;
     this.searchAppUsers();
   }
+
+  editUser(user:ModelNS.Appuser)
+{
+  this.userService.appuserEdit=user;
+  this.router.navigate(["user"]);  
+}
+removeUser(user:ModelNS.Client) {
+      this.userService.deleteAppUser(user);
+      //this.transactions.splice(id, 1);
+    }
 }
