@@ -23,6 +23,7 @@ import { UserService } from './user.service';
 import { TestComponent } from './test/test.component';
 import { ClientComponent } from './client/client.component';
 import { ClientlistComponent } from './clientlist/clientlist.component';
+import { UserlistComponent } from './userlist/userlist.component';
 
 
 let routes = [
@@ -40,6 +41,7 @@ let routes = [
       { path: "test", component: TestComponent },
       { path: "client", component: ClientComponent },
       { path: "clientlist", component: ClientlistComponent },
+      { path: "userlist", component: UserlistComponent },
 
    
 ];
@@ -53,7 +55,7 @@ let routes = [
       })
 
    ],
-  declarations: [ AppComponent, HelloComponent, SignupComponent, HomeComponent, MenuComponent, LoginComponent, LayoutComponent, AccountmanagerComponent, ForgotpasswordComponent, TablesComponent, NavMenuComponent, HeaderComponent, FooterComponent, SummaryComponent, TransactionComponent, TestComponent, ClientComponent, ClientlistComponent,   ],
+  declarations: [ AppComponent, HelloComponent, SignupComponent, HomeComponent, MenuComponent, LoginComponent, LayoutComponent, AccountmanagerComponent, ForgotpasswordComponent, TablesComponent, NavMenuComponent, HeaderComponent, FooterComponent, SummaryComponent, TransactionComponent, TestComponent, ClientComponent, ClientlistComponent, UserlistComponent,   ],
   bootstrap:    [ AppComponent ],
   providers: [DataServiceService, UserService]
 })
