@@ -33,11 +33,11 @@
 															<input type="text" class="form-control form-control-user" placeholder="Type" name="usertype"  [(ngModel)]="user.userType">
                                         </div>
 														 	<div class="row">
-														<div class="form-group col-sm-4">
-															<button type="submit" class="btn btn-danger btn-block"[routerLink]='["/"]'>Cancel</button>
+														<div class="form-group">
+															<button type="submit" class="btn btn-danger"(click)="cancel()">Cancel</button>
 														</div>
-														<div class="form-group col-sm-4>
-															<button type="submit" class="btn btn-primary btn-block" (click)="saveUser()" >Save</button>
+														<div class="form-group">
+															<button type="submit" class="btn btn-primary " (click)="saveUser()" >Save</button>
 														</div>
 													</div>
 														
