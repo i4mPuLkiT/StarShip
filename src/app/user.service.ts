@@ -190,7 +190,8 @@ AddnewUser(user:ModelNS.Appuser)
 
 }
 
-appuserEdit(user:ModelNS.Appuser){
+appuserEdit(user:ModelNS.Appuser)
+{
     
 }
  

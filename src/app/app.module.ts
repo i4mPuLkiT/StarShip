@@ -43,6 +43,7 @@ let routes = [
       { path: "client", component: ClientComponent },
       { path: "clientlist", component: ClientlistComponent },
       { path: "userlist", component: UserlistComponent },
+      { path: "user", component: UserComponent },
 
    
 ];

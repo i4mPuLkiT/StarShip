@@ -16,9 +16,18 @@ export class UserlistComponent implements OnInit {
 
   constructor(private us: UserService, private router: Router) { 
     this.userService = this.us;
-    this.users = this.us.appusers;
+    this.users = this.userService.appusers;
   }
 
   ngOnInit() {  }
 
+  searchAppUsers()
+  {
+ this.users = this.userService.appusers.filter(i => i.name.indexOf(this.searchKey) > -1 || i.phone.indexOf(this.searchKey) > -1 );
+  }
+
+onKey(event: any) { // without type info
+    this.searchKey = event.target.value;
+    this.searchAppUsers();
+  }
 }

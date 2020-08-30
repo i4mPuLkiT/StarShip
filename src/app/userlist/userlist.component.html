@@ -9,18 +9,18 @@
 										<div class="input-group mb-3">
 											<input class="form-control" placeholder="Search client list..." name="searchKey" type="text" [(ngModel)]="searchKey" (keyup)="onKey($event)"/>
 											<div class="input-group-append">
-												<button class="btn btn-primary" type="button" (click)="searchClient()" >Search</button>
+												<button class="btn btn-primary" type="button" (click)="searchAppUsers()" >Search</button>
 											</div>
 										</div>
 									</div>
 
 						<h1>Client List
               <span class="float-right">
-                <button type="button" class="btn btn-primary" [routerLink]='["/client"]'style="margin:5px;">Add</button>
+                <button type="button" class="btn btn-primary" [routerLink]='["/user"]'style="margin:5px;">Add</button>
                 </span>
 						</h1>
 					</div>
-					<p *ngIf="!clients"><em>Loading...</em></p>
+					<p *ngIf="!users"><em>Loading...</em></p>
 
 					<table class="table">
 						<thead>
@@ -28,16 +28,22 @@
 							<tr>
 								<th>Id</th>
                 <th>Name</th>
-                <th>Phone</th>							
+                <th>Email</th>
+                <th>Phone</th>
+                <th>AccountType</th>
+                <th>UserType</th>							
 								
 							</tr>
 						</thead>
-						<tbody *ngIf="clients">
-							<tr *ngFor="let client of clients">
-								<td>{{ client.id }}</td>
-                <td (click)="edit(client)">{{ client.name }}</td>
-                <td (click)="edit(client)">{{ client.phone }}</td>							<td>
-
+						<tbody *ngIf="users">
+							<tr *ngFor="let user of users">
+								<td>{{ user.id }}</td>
+                <td (click)="edit(client)">{{ user.name }}</td>
+                <td (click)="edit(client)">{{ user.email }}</td>
+                <td (click)="edit(client)">{{ user.phone }}</td>
+                <td (click)="edit(client)">{{ user.accountType }}</td>
+                <td (click)="edit(client)">{{ user.userType }}</td>
+                <td>
 									<span class="table-remove">
               <button type="button" class="btn btn-danger" (click)="remove(client)">Delete</button>
             </span></td>
