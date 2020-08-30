@@ -1,44 +1,56 @@
-    <div class="container bg-gradient-primary">
+<div class="container bg-gradient-primary">
 
-        <!-- Outer Row -->
-        <div class="row justify-content-center">
+	<!-- Outer Row -->
+	<div class="row justify-content-center">
 
-            <div class="col-xl-8 col-lg-8 col-md-7">
+		<div class="col-xl-8 col-lg-8 col-md-7">
 
-                <div class="card o-hidden border-0 shadow-lg my-5">
-                    <div class="card-body p-5">
-                        <!-- Nested Row within Card Body -->
-                        <div class="row">
-        <!-- Login form creation starts-->
-        <section class="container-fluid">
-            <!-- row and justify-content-center class is used to place the form in center -->
-            <section class="row justify-content-center">
-                <section class="col-12 col-lg-6">
-                    <form class="form-container">
-                       <div class="form-row">
+			<div class="card o-hidden border-0 shadow-lg my-5">
+				<div class="card-body p-5">
+					<!-- Nested Row within Card Body -->
+					<div class="row justify-content-center">
+						<div class="col-12 col-lg-8">
+							<div class="p-5">								
+								<form class="user" #theForm="ngForm" novalidate>							
 									<div class="form-group">
-										<label class="text-dark"><b>Name</b></label>
-										<input type="text" class="form-control" placeholder="Enter Name" name="clientName"  [(ngModel)]="user.name">
-                                        </div>
+                    <label class="text-dark"><b>Name</b></label>
+										<input type="text" class="form-control form-control-user" id="exampleInputName" placeholder="Full Name" [(ngModel)]="user.name">
+                                    </div>
 										<div class="form-group">
-											<label class="text-dark"><b>Phone</b></label>
-											<input type="text" class="form-control" placeholder="Enter Number" name="clientPhone" [(ngModel)]="user.phone" >
-                                        </div>
-                        <div class="form-group">
-												<button type="submit" class="btn btn-danger" (click)="cancel()" >Cancel</button>
-                        </div>
-                        <div class="form-group">
-												<button type="submit" class="btn btn-primary" (click)="saveUser()">Save</button>
-                        </div>
-											</div>
-                    </form>
-                </section>
-            </section>
-        </section>
+                    <label class="text-dark"><b>Email/Phone no.</b></label>
+											<input type="email" class="form-control form-control-user" id="exampleInputEmail"  placeholder="Enter Email Address/Phone No." [(ngModel)]="user.email">
+                                    </div>
+											<div class="form-group">
+                    <label class="text-dark"><b>Password</b></label>
+												<input type="text" class="form-control form-control-user" id="exampleInputPassword" placeholder="Password" [(ngModel)]="user.password">
+                                    </div>
+												<div class="form-group">
+                           <label class="text-dark"><b>Account Type</b></label>
+													<input type="text" class="form-control form-control-user" id="exampleInputPassword" placeholder="Type" [(ngModel)]="user.accountType">
+                                    </div>
+											<div class="form-group">
+                           <label class="text-dark"><b>User Type</b></label>
+													<input type="text" class="form-control form-control-user" id="exampleInputPassword" placeholder="Type" [(ngModel)]="user.userType">
+                                    </div>		
+                    	<div class="form-group">
+													</div>
+													<div class="row">
+														<div class="form-group col-sm-6 mb-3 mb-sm-0">
+															<button type="submit" class="btn btn-danger btn-block" (click)="cs()">Cancel</button>
+														</div>
+														<div class="form-group col-sm-6 mb-3 mb-sm-0 ">
+															<button type="submit" class="btn btn-primary btn-block" (click)="saveUser()" >Register</button>
+														</div>
+													</div>                
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 
-  </div>
+		</div>
+
+	</div>
+
 </div>
-  </div>
-</div>
-        </div>
-         </div>
