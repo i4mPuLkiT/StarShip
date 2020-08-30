@@ -16,24 +16,25 @@
                 <section class="col-12 col-lg-6">
                     <form class="form-container">
                        <div class="form-row">
-									<div class="col">
+									<div class="form-group">
 										<label class="text-dark"><b>Name</b></label>
 										<input type="text" class="form-control" placeholder="Enter Name" name="clientName"  [(ngModel)]="client.name">
                                         </div>
-										<div class="col">
+										<div class="form-group">
 											<label class="text-dark"><b>Phone</b></label>
 											<input type="text" class="form-control" placeholder="Enter Number" name="clientPhone" [(ngModel)]="client.phone" >
                                         </div>
-										
+                        <div class="form-group">
 												<button type="submit" class="btn btn-danger" (click)="cancel()" >Cancel</button>
+                        </div>
+                        <div class="form-group">
 												<button type="submit" class="btn btn-primary" (click)="save()">Save</button>
-
+                        </div>
 											</div>
                     </form>
                 </section>
             </section>
         </section>
-        <!-- Login form creation ends -->          
 
   </div>
 </div>
