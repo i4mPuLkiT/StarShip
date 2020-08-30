@@ -29,10 +29,9 @@ export class UserComponent implements OnInit {
 
 saveUser()
 {
-  alert(this.user.name);
   if(this.isEdit)
   {
-  this.userService.appuserEdit(this.user);
+  this.userService.userEdit(this.user);
   }
   else
   {

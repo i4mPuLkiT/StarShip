@@ -189,17 +189,17 @@ AddnewUser(user:ModelNS.Appuser)
 
 }
 
-public editUser:ModelNS.Appuser = null;
+public editUser:ModelNS.Appuser=null;
 userEdit(user:ModelNS.Appuser)
 {
     if(this.appusers.length>0)
     {
       //TODO = optimization required
-         this.appusers.find(i=>i.id== user.id).name= user.name;
-         this.appusers.find(i=>i.id== user.id).email=user.email;
-         this.appusers.find(i=>i.id== user.id).phone=user.phone;
-         this.appusers.find(i=>i.id== user.id).accountType=user.accountType;
-         this.appusers.find(i=>i.id== user.id).userType=user.userType;
+         this.appusers.find(g=>g.id== user.id).name= user.name;
+         this.appusers.find(g=>g.id== user.id).email=user.email;
+         this.appusers.find(g=>g.id== user.id).phone=user.phone;
+         this.appusers.find(g=>g.id== user.id).accountType=user.accountType;
+         this.appusers.find(g=>g.id== user.id).userType=user.userType;
          
          
     } 
