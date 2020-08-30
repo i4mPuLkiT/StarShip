@@ -7,7 +7,6 @@ import * as _ from "lodash";
 export class UserService {
   constructor() {   }
 public editTrans:ModelNS.Transaction;
-public editappUser:ModelNS.Appuser = null;
 public transactions:Array<ModelNS.Transaction>=new Array<ModelNS.Transaction>();
 public clients:Array<ModelNS.Client>=new Array<ModelNS.Client>();
 public appusers:Array<ModelNS.Appuser>=new Array<ModelNS.Appuser>();
@@ -169,7 +168,7 @@ editClient(client:ModelNS.Client){
 
 AddnewUser(user:ModelNS.Appuser)
 {
-  this.appuserEdit = null;
+  this.userEdit = null;
   if(this.appusers !=null)
   {
     let ul:Array<ModelNS.Appuser> = this.appusers.filter(i=>i.name == user.name && i.phone == user.phone);
@@ -190,7 +189,8 @@ AddnewUser(user:ModelNS.Appuser)
 
 }
 
-appuserEdit(user:ModelNS.Appuser)
+public editUser:ModelNS.Appuser = null;
+userEdit(user:ModelNS.Appuser)
 {
     if(this.appusers.length>0)
     {
