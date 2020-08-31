@@ -15,7 +15,7 @@
 									<h1 class="h4 text-gray-900 mb-4">Register</h1>
 								</div>
 								<hr />
-								<form class="user" #theForm="ngForm" novalidate>
+								<form class="user" (submit)="registerUser()" #theForm="ngForm" novalidate>
 									<div class="row">
 										<div class="form-group col-sm-6 mb-3 mb-sm-3">
 											<button type="submit" class="btn btn-primary btn-block">Business</button>

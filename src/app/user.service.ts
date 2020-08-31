@@ -170,7 +170,7 @@ editClient(client:ModelNS.Client){
          }
 
 AddnewUser(user:ModelNS.Appuser)
-{
+{ alert(user.name + user.phone + user.email + user.)
   this.editUser = null;
   if(this.appusers !=null)
   {
