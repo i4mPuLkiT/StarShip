@@ -6,23 +6,25 @@
 		<div class="col-xl-8 col-lg-8 col-md-7">
 
 			<div class="card o-hidden border-0 shadow-lg my-5">
-				<div class="card-body p-5">
+				<div class="card-body p-0">
 					<!-- Nested Row within Card Body -->
 					<div class="row justify-content-center">
-						<div class="col-12 col-lg-8">
+						<div class="col-lg-7">
 							<div class="p-5">
 								<div class="text-center">
 									<h1 class="h4 text-gray-900 mb-4">Login</h1>
 								</div>
 								<hr />
 								<form class="user" (submit)="signin()" #theForm="ngForm" novalidate>
-                  										<div class="text-danger"
-											*ngIf="username.touched && username.invalid && username.errors.required">
-											Username is required!</div>
+									<div class="text-danger"
+										*ngIf="username.touched && username.invalid && username.errors.required">
+										Username required!</div>
 									<div class="form-group">
 										<input type="email" name="username" class="form-control form-control-user" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Username(Email Address/Phone No.)" [(ngModel)]="creds.username" #username="ngModel" required >
                                         </div>
-
+										<div class="text-danger"
+											*ngIf="password.touched && password.invalid && password.errors.required">
+											Password required!</div>
 
 										<div class="form-group">
 											<input type="password" name="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Password" [(ngModel)]="creds.password" #password="ngModel"  required>
