@@ -19,7 +19,7 @@ export class UserComponent implements OnInit {
   if(this.userService.editUser!=null)
   {
     this.isEdit=true;
-    this.user = this.us.editUser;
+    this.user = this.userService.editUser;
   }
 
      }
@@ -35,13 +35,14 @@ saveUser()
   }
   else
   {
-        this.userService.editUser=null;
-        this.userService.AddnewUser(this.user);
+    this.userService.editUser=null;
+    this.userService.AddnewUser(this.user);
 
   }
 this.router.navigate(["userlist"]);
   
 }
+
 cancel(){
     if(    this.us.admin.isAuthenticate ==  true )
     {
