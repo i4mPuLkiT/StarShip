@@ -11,11 +11,11 @@ import * as ModelNS from '../model/model';
 })
 export class SignupComponent implements OnInit {
 public userService: any;
-// public creds={
-//     name:"",
-//     username:"",
-//     password:""
-// };
+public creds={
+    name:"",
+    username:"",
+    password:""
+};
 public user:ModelNS.Appuser = new ModelNS.Appuser();
 
   constructor(private us: UserService, private router: Router ) { 
@@ -26,7 +26,7 @@ public user:ModelNS.Appuser = new ModelNS.Appuser();
   ngOnInit() {  }
 
 registerUser()
-{ 
+{ alert(this.user.name + this.user.phone + this.user.email + this.user.password);
    this.userService.AddnewUser(this.user);
    this.router.navigate(["login"]);
 
