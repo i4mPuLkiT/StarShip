@@ -2,6 +2,9 @@ import { Injectable } from '@angular/core';
 import * as ModelNS from './model/model';
 import {observable} from "rxjs";
 import * as _ from "lodash";
+import { ClientService } from './service/client.service';
+import { TransactionService } from './service/transaction.service';
+
 
  @Injectable()
 export class UserService {
