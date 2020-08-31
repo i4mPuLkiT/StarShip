@@ -171,7 +171,7 @@ editClient(client:ModelNS.Client){
 
 AddnewUser(user:ModelNS.Appuser)
 {
-  this.userEdit = null;
+  this.editUser = null;
   if(this.appusers !=null)
   {
     let ul:Array<ModelNS.Appuser> = this.appusers.filter(i=>i.name == user.name && i.phone == user.phone);
@@ -193,7 +193,7 @@ AddnewUser(user:ModelNS.Appuser)
 }
 
 public editUser:ModelNS.Appuser=null;
-userEdit(user:ModelNS.Appuser)
+ userEdit(user:ModelNS.Appuser)
 {
     if(this.appusers.length>0)
     {
