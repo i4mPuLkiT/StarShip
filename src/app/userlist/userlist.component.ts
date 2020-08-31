@@ -33,7 +33,7 @@ onKey(event: any) { // without type info
 
   editUser(user:ModelNS.Appuser)
 {
-  this.userService.userEdit=user;
+  this.userService.editUser=user;
   this.router.navigate(["user"]);  
 }
 removeUser(user:ModelNS.Client) {

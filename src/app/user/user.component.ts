@@ -16,7 +16,7 @@ export class UserComponent implements OnInit {
 
   constructor(private us: UserService, private router: Router) { this.userService = this.us;
   this.isEdit=false;
-  if(this.userService.appuserEdit!=null)
+  if(this.userService.editUser!=null)
   {
     this.isEdit=true;
     this.user = this.us.editUser;
