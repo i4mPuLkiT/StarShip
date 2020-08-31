@@ -28,7 +28,7 @@ public user:ModelNS.Appuser = new ModelNS.Appuser();
 registerUser()
 {
    this.userService.AddnewUser(this.user);
-         this.router.navigate(["userlist"]);
+   this.router.navigate(["login"]);
 
 }
 }

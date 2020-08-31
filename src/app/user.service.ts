@@ -220,5 +220,14 @@ public editUser:ModelNS.Appuser=null;
       }
     } 
 }
-
+// public loggedInUser:ModelNS.Appuser = null;
+authenticateUser(username:string , password:string)
+{
+  let users:Array<ModelNS.Appuser> = this.appusers.filter(i=>(i.email == username || i.phone == username) && i.password == password );
+     if(users!=null && users.length == 1)
+     {
+        this.admin = users[0];
+        this.admin.isAuthenticate = true;
+     }
+}
 }

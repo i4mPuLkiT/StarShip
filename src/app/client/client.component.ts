@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ClientService } from '../service/client.service';
 import { UserService } from '../user.service';
 import { Router } from '@angular/router';
 import * as ModelNS from '../model/model';

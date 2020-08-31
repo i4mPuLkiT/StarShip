@@ -21,18 +21,23 @@ public creds={
   }
   signin()
   {
-      if((this.creds.username == this.userService.admin.email 
-      || this.creds.username == this.userService.admin.phone)
-      && this.creds.password == this.userService.admin.password 
-      )
-      {
-          this.userService.admin.isAuthenticate=true;
-          this.router.navigate(["home"]);
-      }
-      else
-      {
-         this.userService.admin.isAuthenticate=false;        
+    this.userService.authenticateUser(this.creds.username,this.creds.password);
+    if(this.userService.admin.isAuthenticate)
+    {
+      this.router.navigate(["home"]);
+    }
+      // if((this.creds.username == this.userService.admin.email 
+      // || this.creds.username == this.userService.admin.phone)
+      // && this.creds.password == this.userService.admin.password 
+      // )
+      // {
+      //     this.userService.admin.isAuthenticate=true;
+      //     this.router.navigate(["home"]);
+      // }
+      // else
+      // {
+      //    this.userService.admin.isAuthenticate=false;        
           
-      }
+      // }
   }
 }
