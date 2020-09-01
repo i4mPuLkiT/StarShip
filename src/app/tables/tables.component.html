@@ -28,7 +28,6 @@
                 <th>Date</th>
                 <th>Name</th>
                 <th>Phone</th>								
-								<!-- <th>Name</th> -->
 								<th>Amount</th>
 								<th>Type</th>
 								<th>Description</th>
@@ -41,7 +40,6 @@
                	<td>{{tran.date | date:"dd/mm/yyyy hh:mm a"}}</td>
                 <td>{{ tran.user.name }}</td>
                 <td>{{ tran.user.phone }}</td>							
-								<!-- <td>{{ tran.user.name }}</td>  -->
 								<td (click)="edit(tran)">{{ tran.amount| currency:'INR'}}</td>
 								<td>{{ tran.type }}</td>
 								<td>{{ tran.description }}</td>

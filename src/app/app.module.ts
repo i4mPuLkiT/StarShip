@@ -61,6 +61,7 @@ let routes = [
    ],
   declarations: [ AppComponent, HelloComponent, SignupComponent, HomeComponent, MenuComponent, LoginComponent, LayoutComponent, AccountmanagerComponent, ForgotpasswordComponent, TablesComponent, NavMenuComponent, HeaderComponent, FooterComponent, SummaryComponent, TransactionComponent, TestComponent, ClientComponent, ClientlistComponent, UserlistComponent, UserComponent,   ],
   bootstrap:    [ AppComponent ],
+
   providers: [DataServiceService, UserService,ClientService,TransactionService]
 })
 export class AppModule {

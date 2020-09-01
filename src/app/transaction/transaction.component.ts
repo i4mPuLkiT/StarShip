@@ -1,6 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { UserService } from "../user.service";
 import { ClientService } from '../service/client.service';
+import { TransactionService } from '../service/transaction.service';
 import { Router } from "@angular/router";
 import * as ModelNS from "../model/model";
 
@@ -10,38 +11,38 @@ import * as ModelNS from "../model/model";
   styleUrls: ["./transaction.component.css"]
 })
 export class TransactionComponent implements OnInit {
-  public userService: any;
+  public ts: any;
   public cs:any;
+  public userService: any;
   public searchKey: string;
   public values = "";
   public client: ModelNS.Client = new ModelNS.Client();
-
   public trans: ModelNS.Transaction = new ModelNS.Transaction();
   public clients: Array<ModelNS.Client> = new Array<ModelNS.Client>();
   public isEdit: boolean = false;
 
-  constructor(private us: UserService, private router: Router,private cService:ClientService) {
+  constructor(private tService: TransactionService, private router: Router,private cService:ClientService,private us:UserService) {
+    this.ts = this.tService;
     this.userService = this.us;
     this.cs=this.cService;
     this.clients=this.cs.clients;
 
-    if (this.userService.editTrans != null) {
+    if (this.ts.editTrans != null) {
       this.isEdit = true;
-      this.trans = this.userService.editTrans;
+      this.trans = this.ts.editTrans;
     }
   }
 
   ngOnInit() {}
   addTransaction() {
-    this.userService
     if (this.us.admin.isAuthenticate == true) {
       if (this.isEdit) {
-        this.userService.editTransaction(this.trans);
+        this.ts.editTransaction(this.trans);
         this.router.navigate(["tables"]);
       } else {
         this.client = this.cs.addNewClient(this.client);
         this.trans.user = this.client;
-        this.userService.newTransaction(this.trans);
+        this.ts.newTransaction(this.trans);
         this.router.navigate(["home"]);
       }
     } else {

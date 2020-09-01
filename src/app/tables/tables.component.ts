@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from '../user.service';
+import { TransactionService } from '../service/transaction.service';
 import { Router } from '@angular/router';
 import * as ModelNS from '../model/model';
 
@@ -12,36 +13,38 @@ import * as ModelNS from '../model/model';
 export class TablesComponent implements OnInit {
   public searchKey:string;
   public   values = '';
-public userService: any; 
+public userService: any;
+public ts:any; 
 
  public transactions:Array<ModelNS.Transaction>=new Array<ModelNS.Transaction>();
 
 ngOnInit() {
   }
   
-   constructor(private us: UserService, private router: Router){
-       this.transactions = this.us.transactions;
+   constructor(private us: UserService,private tService:TransactionService, private router: Router){
        this.userService = this.us;
-       
+       this.ts=this.tService;
+       this.transactions = this.ts.transactions;
+
    }
 
    add(){
-     this.userService.editTrans=null;
+     this.ts.editTrans=null;
      this.router.navigate(["transaction"]);
    }
 edit(trans:ModelNS.Transaction)
 {
-  this.us.edit(trans);
+  this.ts.edit(trans);
   this.router.navigate(["transaction"]);
   
 }
 remove(trans:ModelNS.Transaction) {
-      this.us.deleteTransaction(trans);
+      this.ts.deleteTransaction(trans);
       //this.transactions.splice(id, 1);
     }
  search()
   {
- this.transactions = this.us.transactions.filter(i => i.user.name.indexOf(this.searchKey) > -1 || i.user.phone.indexOf(this.searchKey) > -1 );
+ this.transactions = this.ts.transactions.filter(i => i.user.name.indexOf(this.searchKey) > -1 || i.user.phone.indexOf(this.searchKey) > -1 );
   }
   
 onKey(event: any) { // without type info
