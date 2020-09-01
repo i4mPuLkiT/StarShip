@@ -15,13 +15,13 @@
 									<h1 class="h4 text-gray-900 mb-4">Register</h1>
 								</div>
 								<hr />
-								<form class="user">
+								<form class="user" (submit)="registerUser()" #theForm="ngForm" novalidate > 
 									<div class="row">
 										<div class="form-group col-sm-6 mb-3 mb-sm-3">
-											<button type="button" class="btn btn-primary btn-block">Business</button>
+											<button type="button" class="btn btn-primary btn-block" (click)="business()">Business</button>
 										</div>
 										<div class="form-group col-sm-6 mb-3 mb-sm-3">
-											<button type="button" class="btn btn-primary btn-block">Personal</button>
+											<button type="button" class="btn btn-primary btn-block" (click)="personal()">Personal</button>
 										</div>
 									</div>
 									<div class="form-group">
@@ -43,7 +43,7 @@
 													</div>
 													<div class="row">
 														<div class="form-group col-sm-6 mb-3 mb-sm-0">
-															<button type="submit" class="btn btn-danger btn-block"[routerLink]='["/"]'>Cancel</button>
+															<button type="submit" class="btn btn-danger btn-block" [routerLink]='["/"]'>Cancel</button>
 														</div>
 														<div class="form-group col-sm-6 mb-3 mb-sm-0 ">
 															<button type="submit" class="btn btn-primary btn-block" (click)="registerUser()" >Register</button>

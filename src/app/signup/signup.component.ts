@@ -31,4 +31,12 @@ registerUser()
    this.router.navigate(["login"]);
 
 }
+
+ business() {
+   this.user.accountType = 1;
+  }
+
+  personal(){
+    this.user.userType = 2;
+  }
 }
