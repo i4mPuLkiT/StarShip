@@ -6,6 +6,7 @@ import * as _ from "lodash";
 @Injectable()
 export class ClientService {
 public clients:Array<ModelNS.Client>=new Array<ModelNS.Client>();
+public clientEdit:ModelNS.Client=null;
 
   constructor() { }
 addNewClient(client:ModelNS.Client):ModelNS.Client
@@ -45,7 +46,6 @@ addNewClient(client:ModelNS.Client):ModelNS.Client
       }
     } 
 }
-public clientEdit:ModelNS.Client=null;
 editClient(client:ModelNS.Client){
     if(this.clients.length>0)
     {

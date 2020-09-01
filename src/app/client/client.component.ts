@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ClientService } from '../service/client.service';
 import { UserService } from '../user.service';
+import { ClientService } from '../service/client.service';
 import { Router } from '@angular/router';
 import * as ModelNS from '../model/model';
 
@@ -12,15 +12,18 @@ import * as ModelNS from '../model/model';
 export class ClientComponent implements OnInit {
   public userService: any;
   public client:ModelNS.Client=new ModelNS.Client();
-
+  public cs: any;
  public isEdit:boolean=false;
 
-  constructor(private us: UserService, private router: Router) { this.userService = this.us;
+  constructor(private us: UserService, private router: Router, private cService: ClientService) { 
+  this.userService = this.us;
+  this.cs=this.cService;
+  
   this.isEdit=false;
-  if(this.userService.clientEdit!=null)
+  if(this.cs.clientEdit!=null)
   {
     this.isEdit=true;
-    this.client = this.userService.clientEdit;
+    this.client = this.cs.clientEdit;
   }
 
      }
@@ -31,12 +34,12 @@ save()
 {
   if(this.isEdit)
   {
-  this.userService.editClient(this.client);
+  this.cs.editClient(this.client);
   }
   else
   {
-        this.userService.clientEdit=null;
-        this.userService.addNewClient(this.client);
+        this.cs.clientEdit=null;
+        this.cs.addNewClient(this.client);
 
   }
 this.router.navigate(["clientlist"]);
