@@ -15,26 +15,29 @@
 									<h1 class="h4 text-gray-900 mb-4">Register</h1>
 								</div>
 								<hr />
-								<form class="user" (submit)="registerUser()" #theForm="ngForm" novalidate>
+								<form class="user">
 									<div class="row">
 										<div class="form-group col-sm-6 mb-3 mb-sm-3">
-											<button type="submit" class="btn btn-primary btn-block">Business</button>
+											<button type="button" class="btn btn-primary btn-block">Business</button>
 										</div>
 										<div class="form-group col-sm-6 mb-3 mb-sm-3">
-											<button type="submit" class="btn btn-primary btn-block">Personal</button>
+											<button type="button" class="btn btn-primary btn-block">Personal</button>
 										</div>
 									</div>
 									<div class="form-group">
-										<input type="text" class="form-control form-control-user" id="exampleInputName" aria-describedby="emailHelp" placeholder="Full Name" [(ngModel)]="user.name">
+										<input type="text" class="form-control form-control-user" id="exampleInputName"  aria-describedby="emailHelp" placeholder="Full Name" [(ngModel)]="user.name" name= "name">                    
                                     </div>
 										<div class="form-group">
-											<input type="email" class="form-control form-control-user" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Enter Email Address/Phone No." [(ngModel)]="user.email">
+											<input type="email" class="form-control form-control-user" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Enter Email Address" [(ngModel)]="user.email"name= "email">
+                                    </div>
+                     	<div class="form-group">
+											<input type="text" class="form-control form-control-user" id="exampleInputPhone" aria-describedby="emailHelp"  placeholder="Enter Phone Number" [(ngModel)]="user.phone"  name= "phone">
                                     </div>
 											<div class="form-group">
-												<input type="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Password" [(ngModel)]="user.password">
+												<input type="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Password" [(ngModel)]="user.password" name= "password">
                                     </div>
 												<div class="form-group">
-													<input type="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Repeat Password" [(ngModel)]="user.password">
+													<input type="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Repeat Password"  [(ngModel)]="user.password" name= "password" >
                                     </div>
 													<div class="form-group">
 													</div>

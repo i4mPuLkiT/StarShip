@@ -26,7 +26,7 @@ public user:ModelNS.Appuser = new ModelNS.Appuser();
   ngOnInit() {  }
 
 registerUser()
-{ alert(this.user.name + this.user.phone + this.user.email + this.user.password);
+{ 
    this.userService.AddnewUser(this.user);
    this.router.navigate(["login"]);
 
