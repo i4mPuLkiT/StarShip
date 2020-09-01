@@ -24,6 +24,11 @@ ngOnInit() {
        this.userService = this.us;
        
    }
+
+   add(){
+     this.userService.editTrans=null;
+     this.router.navigate(["transaction"]);
+   }
 edit(trans:ModelNS.Transaction)
 {
   this.us.edit(trans);

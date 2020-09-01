@@ -11,7 +11,6 @@ export class UserService {
   constructor() {   }
 public editTrans:ModelNS.Transaction;
 public transactions:Array<ModelNS.Transaction>=new Array<ModelNS.Transaction>();
-public clients:Array<ModelNS.Client>=new Array<ModelNS.Client>();
 public appusers:Array<ModelNS.Appuser>=new Array<ModelNS.Appuser>();
 
 

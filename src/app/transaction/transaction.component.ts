@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { UserService } from "../user.service";
+import { ClientService } from '../service/client.service';
 import { Router } from "@angular/router";
 import * as ModelNS from "../model/model";
 
@@ -10,6 +11,7 @@ import * as ModelNS from "../model/model";
 })
 export class TransactionComponent implements OnInit {
   public userService: any;
+  public cs:any;
   public searchKey: string;
   public values = "";
   public client: ModelNS.Client = new ModelNS.Client();
@@ -18,8 +20,10 @@ export class TransactionComponent implements OnInit {
   public clients: Array<ModelNS.Client> = new Array<ModelNS.Client>();
   public isEdit: boolean = false;
 
-  constructor(private us: UserService, private router: Router) {
+  constructor(private us: UserService, private router: Router,private cService:ClientService) {
     this.userService = this.us;
+    this.cs=this.cService;
+    this.clients=this.cs.clients;
 
     if (this.userService.editTrans != null) {
       this.isEdit = true;
@@ -29,12 +33,13 @@ export class TransactionComponent implements OnInit {
 
   ngOnInit() {}
   addTransaction() {
+    this.userService
     if (this.us.admin.isAuthenticate == true) {
       if (this.isEdit) {
         this.userService.editTransaction(this.trans);
         this.router.navigate(["tables"]);
       } else {
-        this.client = this.userService.addNewClient(this.client);
+        this.client = this.cs.addNewClient(this.client);
         this.trans.user = this.client;
         this.userService.newTransaction(this.trans);
         this.router.navigate(["home"]);
@@ -61,7 +66,7 @@ export class TransactionComponent implements OnInit {
     // alert(this.trans.type )
   }
   searchTransaction() {
-    this.clients = this.us.clients.filter(
+    this.clients = this.cs.clients.filter(
       i =>
         i.name.indexOf(this.searchKey) > -1 ||
         i.phone.indexOf(this.searchKey) > -1
