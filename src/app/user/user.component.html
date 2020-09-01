@@ -33,22 +33,38 @@
 													<label class="text-dark"><b>Password</b></label>
 													<input type="password" class="form-control form-control-user" placeholder="Enter password" name="userPassword"  [(ngModel)]="user.password">
                                         </div>
-													<div class="form-group">
-														<label class="text-dark"><b>Account Type</b></label>
-														<input type="text" class="form-control form-control-user" placeholder="Type" name="usertype"  [(ngModel)]="user.accountType">
-                                        </div>
+													<div class="row">
 														<div class="form-group">
-															<label class="text-dark"><b>User Type</b></label>
-															<input type="text" class="form-control form-control-user" placeholder="Type" name="usertype"  [(ngModel)]="user.userType">
-                                        </div>
-															<div class="row">
-																<div class="form-group">
-																	<button type="submit" class="btn btn-danger"(click)="cancel()">Cancel</button>
-																</div>
-																<div class="form-group">
-																	<button type="submit" class="btn btn-primary " (click)="saveUser()" >Save</button>
-																</div>
+															<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Account Type
+  </button>
+															<div class="dropdown-menu">
+																<a class="dropdown-item" href="#">Action</a>
+																<a class="dropdown-item" href="#">Another action</a>
+																<a class="dropdown-item" href="#">Something else
+																	here</a>
 															</div>
+														</div>
+														<div class="form-group">
+															<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    User Type
+  </button>
+															<div class="dropdown-menu">
+																<a class="dropdown-item" href="#">Action</a>
+																<a class="dropdown-item" href="#">Another action</a>
+																<a class="dropdown-item" href="#">Something else
+																	here</a>
+															</div>
+														</div>
+													</div>
+													<div class="row">
+														<div class="form-group">
+															<button type="submit" class="btn btn-danger"(click)="cancel()">Cancel</button>
+														</div>
+														<div class="form-group">
+															<button type="submit" class="btn btn-primary " (click)="saveUser()" >Save</button>
+														</div>
+													</div>
 
 
 								</form>

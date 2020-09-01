@@ -1,3 +1,6 @@
 .form-group button[type=submit]{
-    margin: 8px;
+    margin: 5px;
+}
+.form-group button[type=button]{
+    margin: 15px;
 }
