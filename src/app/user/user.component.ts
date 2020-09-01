@@ -55,4 +55,13 @@ cancel(){
        this.router.navigate(["login"]);
     }
     }
+
+   isExpanded = false;
+
+    toggle() {
+     this.isExpanded = !this.isExpanded;
+  }
+   collapse() {
+    this.isExpanded = false;
+  }
 }
