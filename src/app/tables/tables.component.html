@@ -15,7 +15,10 @@
 										</div>
 									</div>
               
-						<h1>Transactions<span class="float-right"><button type="button" class="btn btn-primary" style="margin:5px;" (click)="add()">Add</button><button type="button" class="btn btn-secondary" [routerLink]='["/home"]'style="margin:5px;">Back</button></span>
+						<h1>Transactions<span class="float-right">
+              <button type="button" class="btn btn-primary" style="margin:5px;" (click)="add()">Add</button>
+            <button type="button" class="btn btn-success" [routerLink]='["/home"]'style="margin:5px;">Back</button>
+            </span>
 						</h1>
 					</div>          
 					<p *ngIf="!transactions"><em>Loading...</em></p>
