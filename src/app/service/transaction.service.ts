@@ -1,11 +1,15 @@
 import { Injectable } from '@angular/core';
 import * as ModelNS from '../model/model';
+import { ClientService } from '../service/client.service';
 import {observable} from "rxjs";
 import * as _ from "lodash";
 
 @Injectable()
 export class TransactionService {
-    constructor() { }
+    constructor(private cs:ClientService) {
+       this.seedData();
+       
+     }
 public editTrans:ModelNS.Transaction;
 public transactions:Array<ModelNS.Transaction>=new Array<ModelNS.Transaction>();
 
@@ -98,7 +102,47 @@ public transactions:Array<ModelNS.Transaction>=new Array<ModelNS.Transaction>();
       }
     } 
 }
+seedData()
+{
+  let trans1:ModelNS.Transaction = new ModelNS.Transaction ();
+  trans1.id=1;
+  trans1.amount=100;
+  trans1.description="fast food";
+  trans1.type="Dr";
+  trans1.user=this.cs.clients.find(i=>i.id == 1);
+  this.transactions.push(trans1);
 
+  let trans2:ModelNS.Transaction = new ModelNS.Transaction ();
+  trans2.id=2;
+  trans2.amount=200;
+  trans2.description="fast food";
+  trans2.type="Cr";
+  trans2.user=this.cs.clients.find(i=>i.id == 2);
+  this.transactions.push(trans2);
 
+  let trans3:ModelNS.Transaction = new ModelNS.Transaction ();
+  trans3.id=3;
+  trans3.amount=500;
+  trans3.description="fast food";
+  trans3.type="Cr";
+  trans3.user=this.cs.clients.find(i=>i.id == 3);
+  this.transactions.push(trans3);
 
+  let trans4:ModelNS.Transaction = new ModelNS.Transaction ();
+  trans4.id=4;
+  trans4.amount=20;
+  trans4.description="kurukure";
+  trans4.type="Dr";
+  trans4.user=this.cs.clients.find(i=>i.id == 4);
+  this.transactions.push(trans4);
+
+  let trans5:ModelNS.Transaction = new ModelNS.Transaction ();
+  trans5.id=5;
+  trans5.amount200;
+  trans5.description="fast food";
+  trans5.type="Dr";
+  trans5.user=this.cs.clients.find(i=>i.id == 4);
+  this.transactions.push(trans5);
+}
+  
 }
