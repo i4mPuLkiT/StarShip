@@ -22,12 +22,12 @@
          <li class="nav-item" [routerLink]='["/clientlist"]'>
           <a class="nav-link text-white" >Client List</a>
         </li>
-         <li class="nav-item" [routerLink]='["/userlist"]'>
+         <li class="nav-item" [routerLink]='["/userlist"]' *ngIf = "visibleclientlist">
           <a class="nav-link text-white" >User List</a>
         </li>
-        <li class="nav-item" [routerLink]='["/test"]'>
+        <!-- <li class="nav-item" [routerLink]='["/test"]'>
           <a class="nav-link text-white" >Test</a>
-        </li>       
+        </li>        -->
       </ul>
     </div>
   </nav>

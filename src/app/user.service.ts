@@ -99,18 +99,18 @@ seedData()
   batrastore.name="Batra";
   batrastore.phone="1";
   batrastore.password="1";
-  batrastore.isAuthenticate= true;
+  batrastore.isAuthenticate= false;
   batrastore.accountType = ModelNS.AccountType.buisness;
   batrastore.userType = ModelNS.UserType.other;
   this.appusers.push(batrastore);
 
   let vibhuAcc:ModelNS.Appuser = new ModelNS.Appuser ();
   vibhuAcc.id=3;
-  vibhuAcc.email="vibhu@r.com";
+  vibhuAcc.email="vibhu@rasor.com";
   vibhuAcc.name="Vibhu";
   vibhuAcc.phone="1";
   vibhuAcc.password="1";
-  vibhuAcc.isAuthenticate= true;
+  vibhuAcc.isAuthenticate= false;
   vibhuAcc.accountType = ModelNS.AccountType.personal;       
   vibhuAcc.userType = ModelNS.UserType.other;
   this.appusers.push(vibhuAcc);
