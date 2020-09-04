@@ -8,20 +8,12 @@ import { TransactionService } from './service/transaction.service';
 
  @Injectable()
 export class UserService {
-  constructor() {   }
+  constructor() { 
+    this.seedData();
+    }
 public appusers:Array<ModelNS.Appuser>=new Array<ModelNS.Appuser>();
 
-public admin:ModelNS.Appuser = 
-         {
-        "id": 1,
-        "name": "Adminstrator",
-        "email": "admin@brolia.com",
-        "phone": "1",
-        "password":"1",
-        "isAuthenticate": true,
-        "accountType":1,
-        "userType":1
-         }
+
 
 AddnewUser(user:ModelNS.Appuser)
 { 
@@ -83,5 +75,44 @@ authenticateUser(username:string , password:string)
         this.admin = users[0];
         this.admin.isAuthenticate = true;
      }
+}
+public admin:ModelNS.Appuser = null;
+         
+seedData()
+{
+  let adminUser:ModelNS.Appuser = new ModelNS.Appuser ();
+  adminUser.id=1;
+  adminUser.email="admin@brolia.com";
+  adminUser.name="Adminstrator";
+  adminUser.phone="1";
+  adminUser.password="1";
+  adminUser.isAuthenticate= true;
+  adminUser.accountType =ModelNS.AccountType.all;
+  adminUser.userType = ModelNS.UserType.administrator;
+  this.appusers.push(adminUser);
+  this.admin = adminUser;
+  
+
+  let batrastore:ModelNS.Appuser = new ModelNS.Appuser ();
+  batrastore.id=2;
+  batrastore.email="admin@brolia.com";
+  batrastore.name="Batra";
+  batrastore.phone="1";
+  batrastore.password="1";
+  batrastore.isAuthenticate= true;
+  batrastore.accountType = ModelNS.AccountType.buisness;
+  batrastore.userType = ModelNS.UserType.ot;
+  this.appusers.push(batrastore);
+
+  let vibhuAcc:ModelNS.Appuser = new ModelNS.Appuser ();
+  vibhuAcc.id=3;
+  vibhuAcc.email="admin@brolia.com";
+  vibhuAcc.name="Vibhu";
+  vibhuAcc.phone="1";
+  vibhuAcc.password="1";
+  vibhuAcc.isAuthenticate= true;
+  vibhuAcc.accountType = ModelNS.AccountType.personal;       
+  vibhuAcc.userType = ModelNS.UserType.other;
+  this.appusers.push(vibhuAcc);
 }
 }

@@ -5,8 +5,8 @@ export class Appuser {
     phone: string;
     password: string;
     isAuthenticate: boolean;
-    accountType:number;
-    userType:number;
+    accountType:AccountType;
+    userType:UserType;
 }
 export class Transaction {
    id: number;
@@ -20,4 +20,16 @@ export class Client {
    id: number;
     name: string;
     phone: string;
+}
+
+export enum AccountType {
+  all = 0,
+  buisness = 1,
+  personal = 2,
+}
+
+export enum UserType {
+  unknown = 0,
+  administrator = 1,
+  other = 2,
 }

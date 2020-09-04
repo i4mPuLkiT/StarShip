@@ -138,7 +138,7 @@ seedData()
 
   let trans5:ModelNS.Transaction = new ModelNS.Transaction ();
   trans5.id=5;
-  trans5.amount200;
+  trans5.amount=200;
   trans5.description="fast food";
   trans5.type="Dr";
   trans5.user=this.cs.clients.find(i=>i.id == 4);
