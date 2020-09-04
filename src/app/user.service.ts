@@ -11,7 +11,7 @@ export class UserService {
   constructor() {   }
 public appusers:Array<ModelNS.Appuser>=new Array<ModelNS.Appuser>();
 
-  public admin:ModelNS.Appuser = 
+public admin:ModelNS.Appuser = 
          {
         "id": 1,
         "name": "Adminstrator",

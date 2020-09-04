@@ -8,7 +8,9 @@ export class ClientService {
 public clients:Array<ModelNS.Client>=new Array<ModelNS.Client>();
 public clientEdit:ModelNS.Client=null;
 
-  constructor() { }
+  constructor() {
+    this.seedData();
+   }
 addNewClient(client:ModelNS.Client):ModelNS.Client
  {
    this.clientEdit=null;
@@ -55,4 +57,32 @@ editClient(client:ModelNS.Client){
          
     } 
 }
+seedData()
+{
+  let pulkit:ModelNS.Client = new ModelNS.Client ();
+  pulkit.id=1;
+  pulkit.name="Pulkit";
+  pulkit.phone="1111";
+  this.clients.push(pulkit);
+
+  let muskan:ModelNS.Client = new ModelNS.Client ();
+  muskan.id=2;
+  muskan.name="Muskan";
+  muskan.phone="1111";
+  this.clients.push(muskan); 
+  
+  let sunny:ModelNS.Client = new ModelNS.Client ();
+  sunny.id=3;
+  sunny.name="sunny";
+  sunny.phone="1111";
+  this.clients.push(sunny); 
+
+
+  let vibhu:ModelNS.Client = new ModelNS.Client ();
+  vibhu.id=4;
+  vibhu.name="Vibhu";
+  vibhu.phone="1111";
+  this.clients.push(vibhu); 
+}
+
 }
