@@ -95,18 +95,18 @@ seedData()
 
   let batrastore:ModelNS.Appuser = new ModelNS.Appuser ();
   batrastore.id=2;
-  batrastore.email="admin@brolia.com";
+  batrastore.email="batra@dukan.com";
   batrastore.name="Batra";
   batrastore.phone="1";
   batrastore.password="1";
   batrastore.isAuthenticate= true;
   batrastore.accountType = ModelNS.AccountType.buisness;
-  batrastore.userType = ModelNS.UserType.ot;
+  batrastore.userType = ModelNS.UserType.other;
   this.appusers.push(batrastore);
 
   let vibhuAcc:ModelNS.Appuser = new ModelNS.Appuser ();
   vibhuAcc.id=3;
-  vibhuAcc.email="admin@brolia.com";
+  vibhuAcc.email="vibhu@r.com";
   vibhuAcc.name="Vibhu";
   vibhuAcc.phone="1";
   vibhuAcc.password="1";
