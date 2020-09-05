@@ -16,8 +16,9 @@ export class NavMenuComponent implements OnInit {
   public visibleuserlist:boolean = false;
   constructor(private uss: UserService, private router: Router) {
     this.us = this.uss;
-    this.visibleuserlist =  this.us.admin.UserType == ModelNS.UserType.administrator;
-   }
+    this.visibleuserlist =  this.us.admin.userType == ModelNS.UserType.administrator;
+    
+      }
   ngOnInit() {
   }
   isExpanded = false;
