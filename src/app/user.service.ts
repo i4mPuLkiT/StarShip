@@ -106,7 +106,7 @@ seedData()
 
   let vibhuAcc:ModelNS.Appuser = new ModelNS.Appuser ();
   vibhuAcc.id=3;
-  vibhuAcc.email="vibhu@rasor.com";
+  vibhuAcc.email="vibhu@saini.com";
   vibhuAcc.name="Vibhu";
   vibhuAcc.phone="111";
   vibhuAcc.password="1";
