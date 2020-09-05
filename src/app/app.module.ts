@@ -29,6 +29,7 @@ import { ClientService } from './service/client.service';
 import { TransactionService } from './service/transaction.service';
 
 
+
 let routes = [
   { path: "", component: AccountmanagerComponent },
   { path: "login", component: LoginComponent },
