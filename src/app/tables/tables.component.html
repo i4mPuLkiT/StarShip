@@ -40,7 +40,7 @@
 						<tbody *ngIf="transactions">
 							<tr *ngFor="let tran of transactions">
 								<td>{{ tran.id }}</td>
-               	<td>{{tran.date | date:'medium'"}}</td>
+               	<td>{{tran.date | date:'medium'}}</td>
                 <td>{{ tran.user.name }}</td>
                 <td>{{ tran.user.phone }}</td>							
 								<td (click)="edit(tran)">{{ tran.amount| currency:'INR'}}</td>
