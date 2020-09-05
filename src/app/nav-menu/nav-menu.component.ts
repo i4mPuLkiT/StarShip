@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from '../user.service';
+import { TransactionService } from '../service/transaction.service';
+import { ClientService } from '../service/client.service';
+
 import * as ModelNS from '../model/model';
 import { Router } from '@angular/router';
 

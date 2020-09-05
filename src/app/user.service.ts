@@ -97,7 +97,7 @@ seedData()
   batrastore.id=2;
   batrastore.email="batra@dukan.com";
   batrastore.name="Batra";
-  batrastore.phone="1";
+  batrastore.phone="11";
   batrastore.password="1";
   batrastore.isAuthenticate= false;
   batrastore.accountType = ModelNS.AccountType.buisness;
@@ -108,7 +108,7 @@ seedData()
   vibhuAcc.id=3;
   vibhuAcc.email="vibhu@rasor.com";
   vibhuAcc.name="Vibhu";
-  vibhuAcc.phone="1";
+  vibhuAcc.phone="111";
   vibhuAcc.password="1";
   vibhuAcc.isAuthenticate= false;
   vibhuAcc.accountType = ModelNS.AccountType.personal;       

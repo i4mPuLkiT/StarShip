@@ -68,20 +68,20 @@ seedData()
   let muskan:ModelNS.Client = new ModelNS.Client ();
   muskan.id=2;
   muskan.name="Muskan";
-  muskan.phone="1111";
+  muskan.phone="2222";
   this.clients.push(muskan); 
   
   let sunny:ModelNS.Client = new ModelNS.Client ();
   sunny.id=3;
   sunny.name="sunny";
-  sunny.phone="1111";
+  sunny.phone="3333";
   this.clients.push(sunny); 
 
 
   let vibhu:ModelNS.Client = new ModelNS.Client ();
   vibhu.id=4;
   vibhu.name="Vibhu";
-  vibhu.phone="1111";
+  vibhu.phone="4444";
   this.clients.push(vibhu); 
 }
 
