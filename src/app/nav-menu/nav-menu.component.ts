@@ -39,7 +39,6 @@ export class NavMenuComponent implements OnInit {
 
   }
   homeclick(){
-        //  alert("this.us.admin.isAuthenticate =" + this.us.admin.isAuthenticate);
     if(    this.us.admin.isAuthenticate ==  true )
     {
      this.router.navigate(["home"]);
