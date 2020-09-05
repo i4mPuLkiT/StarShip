@@ -13,10 +13,10 @@ import { Router } from '@angular/router';
 })
 export class NavMenuComponent implements OnInit {
   public us: any;
-  public visibleclientlist:boolean = false;
+  public visibleuserlist:boolean = false;
   constructor(private uss: UserService, private router: Router) {
     this.us = this.uss;
-    this.visibleclientlist =  this.us.admin.UserType == ModelNS.UserType.administrator;
+    this.visibleuserlist =  this.us.admin.UserType == ModelNS.UserType.administrator;
    }
   ngOnInit() {
   }
