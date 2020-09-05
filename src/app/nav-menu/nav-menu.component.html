@@ -1,6 +1,6 @@
 <header>
   <nav class='navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark border-bottom box-shadow mb-3'>
-    <i class="fa fa-gg" aria-hidden="true"></i><a class="navbar-brand"(click)="homeclick()">{{us.admin.name}}</a>
+    <i class="fa fa-gg" aria-hidden="true"></i><a class="navbar-brand"(click)="homeclick()" *ngIf="us.admin.isAuthenticate">{{us.admin.name}}</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-label="Toggle navigation"
       [attr.aria-expanded]="isExpanded" (click)="toggle()">
       <span class="navbar-toggler-icon"></span>
@@ -20,7 +20,7 @@
           <a class="nav-link text-white" *ngIf="!us.admin.isAuthenticate">Signup</a>
         </li>
          <li class="nav-item" [routerLink]='["/clientlist"]'>
-          <a class="nav-link text-white" >Client List</a>
+          <a class="nav-link text-white" *ngIf="us.admin.isAuthenticate" >Client List</a>
         </li>
          <li class="nav-item" [routerLink]='["/userlist"]' *ngIf = "visibleclientlist">
           <a class="nav-link text-white" >User List</a>
