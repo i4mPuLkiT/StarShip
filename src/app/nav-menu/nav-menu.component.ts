@@ -13,10 +13,8 @@ import { Router } from '@angular/router';
 })
 export class NavMenuComponent implements OnInit {
   public us: any;
-  public visibleuserlist:boolean = false;
   constructor(private uss: UserService, private router: Router) {
     this.us = this.uss;
-    this.visibleuserlist =  this.us.loggedInUser.userType == ModelNS.UserType.administrator;
     
       }
   ngOnInit() {
@@ -34,8 +32,7 @@ export class NavMenuComponent implements OnInit {
     this.router.navigate(["login"]);
   }
   signout() {
-    this.us.loggedInUser= new ModelNS.Appuser();
-    
+    this.us.loggedInUser= new ModelNS.Appuser();    
       this.router.navigate(["login"]);
 
   }
