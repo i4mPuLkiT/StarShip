@@ -72,11 +72,11 @@ authenticateUser(username:string , password:string)
   let users:Array<ModelNS.Appuser> = this.appusers.filter(i=>(i.email == username || i.phone == username) && i.password == password );
      if(users!=null && users.length == 1)
      {
-        this.admin = users[0];
-        this.admin.isAuthenticate = true;
+        this.loggedInUser = users[0];
+        this.loggedInUser.isAuthenticate = true;
      }
 }
-public admin:ModelNS.Appuser = null;
+public loggedInUser:ModelNS.Appuser = null;
          
 seedData()
 {
@@ -90,7 +90,7 @@ seedData()
   adminUser.accountType =ModelNS.AccountType.all;
   adminUser.userType = ModelNS.UserType.administrator;
   this.appusers.push(adminUser);
-  this.admin = adminUser;
+  this.loggedInUser = adminUser;
   
 
   let batrastore:ModelNS.Appuser = new ModelNS.Appuser ();

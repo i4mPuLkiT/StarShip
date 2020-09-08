@@ -47,7 +47,7 @@ this.router.navigate(["clientlist"]);
 }
 
   cancel(){
-    if(    this.us.admin.isAuthenticate ==  true )
+    if(    this.us.loggedInUser.isAuthenticate ==  true )
     {
      this.router.navigate(["clientlist"]);
 

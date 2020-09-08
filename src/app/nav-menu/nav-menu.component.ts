@@ -16,7 +16,7 @@ export class NavMenuComponent implements OnInit {
   public visibleuserlist:boolean = false;
   constructor(private uss: UserService, private router: Router) {
     this.us = this.uss;
-    this.visibleuserlist =  this.us.admin.userType == ModelNS.UserType.administrator;
+    this.visibleuserlist =  this.us.loggedInUser.userType == ModelNS.UserType.administrator;
     
       }
   ngOnInit() {
@@ -34,12 +34,13 @@ export class NavMenuComponent implements OnInit {
     this.router.navigate(["login"]);
   }
   signout() {
-    this.us.admin.isAuthenticate=false; 
+    this.us.loggedInUser= new ModelNS.Appuser();
+    
       this.router.navigate(["login"]);
 
   }
   homeclick(){
-    if(    this.us.admin.isAuthenticate ==  true )
+    if(    this.us.loggedInUser.isAuthenticate ==  true )
     {
      this.router.navigate(["home"]);
 

@@ -22,7 +22,7 @@ public creds={
   signin()
   {
     this.userService.authenticateUser(this.creds.username,this.creds.password);
-    if(this.userService.admin.isAuthenticate)
+    if(this.userService.loggedInUser.isAuthenticate)
     {
       this.router.navigate(["home"]);
     }
@@ -31,12 +31,12 @@ public creds={
       // && this.creds.password == this.userService.admin.password 
       // )
       // {
-      //     this.userService.admin.isAuthenticate=true;
+      //     this.userService.loggedInUser.isAuthenticate=true;
       //     this.router.navigate(["home"]);
       // }
       // else
       // {
-      //    this.userService.admin.isAuthenticate=false;        
+      //    this.userService.loggedInUser.isAuthenticate=false;        
           
       // }
   }

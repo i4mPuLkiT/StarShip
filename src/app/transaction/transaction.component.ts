@@ -35,7 +35,7 @@ export class TransactionComponent implements OnInit {
 
   ngOnInit() {}
   addTransaction() {
-    if (this.us.admin.isAuthenticate == true) {
+    if (this.us.loggedInUser.isAuthenticate == true) {
       if (this.isEdit) {
         this.ts.editTransaction(this.trans);
         this.router.navigate(["tables"]);
@@ -51,8 +51,8 @@ export class TransactionComponent implements OnInit {
   }
 
   cancel() {
-    //  alert("this.us.admin.isAuthenticate =" + this.us.admin.isAuthenticate);
-    if (this.us.admin.isAuthenticate == true) {
+
+    if (this.us.loggedInUser.isAuthenticate == true) {
       this.router.navigate(["home"]);
     } else {
       this.router.navigate(["login"]);

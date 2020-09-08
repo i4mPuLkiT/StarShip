@@ -45,7 +45,7 @@ this.router.navigate(["userlist"]);
 }
 
 cancel(){
-    if(    this.us.admin.isAuthenticate ==  true )
+    if(    this.us.loggedInUser.isAuthenticate ==  true )
     {
      this.router.navigate(["userlist"]);
 
