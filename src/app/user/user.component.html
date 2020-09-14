@@ -19,19 +19,19 @@
 								<form class="user">
 									<div class="form-group">
 										<label class="text-dark"><b>Name</b></label>
-										<input type="text" class="form-control form-control-user" placeholder="Enter Name" name="userName"  [(ngModel)]="user.name">
+										<input type="text" class="form-control form-control-user" placeholder="Enter Name" name="userName"  [(ngModel)]="user.name" ngModel maxlength="25">
                                         </div>
 										<div class="form-group">
 											<label class="text-dark"><b>Phone</b></label>
-											<input type="text" class="form-control form-control-user" placeholder="Enter Number" name="userPhone" [(ngModel)]="user.phone" >
+											<input type="text" class="form-control form-control-user" placeholder="Enter Number" name="userPhone" [(ngModel)]="user.phone" ngModel maxlength="10">
                                         </div>
 											<div class="form-group">
 												<label class="text-dark"><b>Email</b></label>
-												<input type="email" class="form-control form-control-user" placeholder="Enter email" name="userEmail"  [(ngModel)]="user.email">
+												<input type="email" class="form-control form-control-user" placeholder="Enter email" name="userEmail"  [(ngModel)]="user.email" ngModel maxlength="25">
                                         </div>
 												<div class="form-group">
 													<label class="text-dark"><b>Password</b></label>
-													<input type="password" class="form-control form-control-user" placeholder="Enter password" name="userPassword"  [(ngModel)]="user.password">
+													<input type="password" class="form-control form-control-user" placeholder="Enter password" name="userPassword"  [(ngModel)]="user.password" ngModel maxlength="25">
                                         </div>
 													<div class="row">
 														<div class="form-group">
