@@ -21,14 +21,14 @@
 										*ngIf="username.touched && username.invalid && username.errors.required">
 										Username required!</div>
 									<div class="form-group">
-										<input type="email" name="username" class="form-control form-control-user" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Username(Email Address/Phone No.)" [(ngModel)]="creds.username" #username="ngModel" required >
+										<input type="email" name="username" class="form-control form-control-user" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Username(Email Address/Phone No.)" [(ngModel)]="creds.username" #username="ngModel" required ngModel maxlength="25">
                                         </div>
 										<div class="text-danger"
 											*ngIf="password.touched && password.invalid && password.errors.required">
 											Password required!</div>
 
 										<div class="form-group">
-											<input type="password" name="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Password" [(ngModel)]="creds.password" #password="ngModel"  required>
+											<input type="password" name="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Password" [(ngModel)]="creds.password" #password="ngModel"  required ngModel maxlength="25">
                                         </div>
 
 

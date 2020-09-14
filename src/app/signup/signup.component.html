@@ -25,19 +25,19 @@
 										</div>
 									</div>
 									<div class="form-group">
-										<input type="text" class="form-control form-control-user" id="exampleInputName"  aria-describedby="emailHelp" placeholder="Full Name" [(ngModel)]="user.name" name= "name">                    
+										<input type="text" class="form-control form-control-user" id="exampleInputName"  aria-describedby="emailHelp" placeholder="Full Name" [(ngModel)]="user.name" name= "name" ngModel maxlength="25">                    
                                     </div>
 										<div class="form-group">
-											<input type="email" class="form-control form-control-user" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Enter Email Address" [(ngModel)]="user.email"name= "email">
+											<input type="email" class="form-control form-control-user" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Enter Email Address" [(ngModel)]="user.email"name= "email" ngModel maxlength="25">
                                     </div>
                      	<div class="form-group">
-											<input type="text" class="form-control form-control-user" id="exampleInputPhone" aria-describedby="emailHelp"  placeholder="Enter Phone Number" [(ngModel)]="user.phone"  name= "phone">
+											<input type="text" class="form-control form-control-user" id="exampleInputPhone" aria-describedby="emailHelp"  placeholder="Enter Phone Number" [(ngModel)]="user.phone"  name= "phone" ngModel maxlength="10">
                                     </div>
 											<div class="form-group">
-												<input type="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Password" [(ngModel)]="user.password" name= "password">
+												<input type="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Password" [(ngModel)]="user.password" name= "password" ngModel maxlength="25">
                                     </div>
 												<div class="form-group">
-													<input type="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Repeat Password"  [(ngModel)]="user.password" name= "password" >
+													<input type="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Repeat Password"  [(ngModel)]="user.password" name= "password" ngModel maxlength="25">
                                     </div>
 													<div class="form-group">
 													</div>
