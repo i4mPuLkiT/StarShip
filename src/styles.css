@@ -8,7 +8,7 @@ body {
     font-size: 1.05rem;
     font-weight: 400;
     line-height: 1.5;
-    color: black;
+    color: #858796;
     text-align: left;
     background-color: #fff;
 }
@@ -167,6 +167,8 @@ p {
     margin-bottom: .0rem;
     font-weight: 500;
     line-height: 1.2;
+   
+
 }
 .form-row {
     display: -ms-flexbox;
@@ -176,4 +178,64 @@ p {
     margin-right: -5px;
     margin-left: -5px;
     margin-bottom: 1.5rem;
+}
+.form-group button[type=submit]{
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 1.35rem;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    margin: 5px;
+}
+.table {
+    width: 100%;
+    margin-bottom: 1rem;
+}
+table.dataTable {
+    clear: both;
+    margin-top: 6px !important;
+    margin-bottom: 6px !important;
+    max-width: none !important;
+    border-collapse: separate !important;
+    border-spacing: 0;
+}
+.table-bordered {
+    border: 1px solid #e3e6f0;
+}
+.table-bordered td, .table-bordered th {
+    border: 1px solid #e3e6f0;
+}
+.table td, .table th {
+    padding: .75rem;
+    vertical-align: top;
+    border-top: 1px solid #e3e6f0;
+}
+tr {
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+}
+.card-body {
+    flex: 1 1 auto;
+    min-height: 1px;
+    padding: 1.25rem;
+}
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid #e3e6f0;
+    border-radius: .35rem;
 }
