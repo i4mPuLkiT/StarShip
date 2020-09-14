@@ -26,18 +26,6 @@ public creds={
     {
       this.router.navigate(["home"]);
     }
-      // if((this.creds.username == this.userService.admin.email 
-      // || this.creds.username == this.userService.admin.phone)
-      // && this.creds.password == this.userService.admin.password 
-      // )
-      // {
-      //     this.userService.loggedInUser.isAuthenticate=true;
-      //     this.router.navigate(["home"]);
-      // }
-      // else
-      // {
-      //    this.userService.loggedInUser.isAuthenticate=false;        
-          
-      // }
+      
   }
 }
