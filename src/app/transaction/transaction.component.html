@@ -40,7 +40,7 @@
 										<div class="form-group text-center">
 											<label class="text-Dark"><b>Amount</b></label>
 											<div class="row justify-content-center">
-												<input type="number" name="Amount" [(ngModel)]="trans.amount" class="form-control" placeholder="Enter Amount...." ngModel maxlength=""/>
+												<input type="number" name="Amount" [(ngModel)]="trans.amount" class="form-control" placeholder="Enter Amount...." min="0.00" max="10000000.00" step="0.01"/>
                         </div>
 												<button type="submit" class="btn btn-circle bg-primary text-white" (click)="debit()">Debit</button>
 												<button type="submit" class="btn btn-circle bg-primary text-white" (click)="credit()">Credit</button>
