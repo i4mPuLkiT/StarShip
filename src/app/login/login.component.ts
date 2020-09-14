@@ -29,7 +29,7 @@ public creds={
     }
       else
       {
-        err => this.errorMessage = "Failed to login";
+        this.errorMessage = "Failed to login";
       }
   }
 }
