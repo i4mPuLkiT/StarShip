@@ -239,3 +239,30 @@ tr {
     border: 1px solid #e3e6f0;
     border-radius: .35rem;
 }
+
+
+.form-group textarea {
+    width:350px;
+    height: 125px;
+}
+
+
+
+
+input[name="Amount"] {
+  width:50%;
+  border-radius: 1.35rem;
+  line-height: 1.5;
+
+}
+input[name="searchKey"] {
+  width:30%;
+  border-radius: 1.35rem;
+  line-height: 1.5;
+
+}
+.form-row input[type=text]{
+    font-size: 1rem;
+    border-radius: 1.35rem;
+
+}
