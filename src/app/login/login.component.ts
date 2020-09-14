@@ -9,6 +9,7 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
 public userService: any;
+errorMessage: string = "";
 public creds={
     username:"",
     password:""
@@ -26,6 +27,9 @@ public creds={
     {
       this.router.navigate(["home"]);
     }
-      
+      else
+      {
+        err => this.errorMessage = "Failed to login";
+      }
   }
 }

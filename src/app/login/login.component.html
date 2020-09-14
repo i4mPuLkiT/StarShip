@@ -15,6 +15,7 @@
 									<h1 class="h4 text-gray-900 mb-4">Login</h1>
 								</div>
 								<hr />
+                <div *ngIf="errorMessage" class="alert alert-warning">{{ errorMessage }}</div>
 								<form class="user" (submit)="signin()" #theForm="ngForm" novalidate>
 									<div class="text-danger"
 										*ngIf="username.touched && username.invalid && username.errors.required">
