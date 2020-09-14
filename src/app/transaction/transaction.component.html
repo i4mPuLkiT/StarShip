@@ -29,18 +29,18 @@
 								<div class="form-row">
 									<div class="col">
 										<label class="text-dark"><b>Name</b></label>
-										<input type="text" class="form-control" placeholder="Enter Name" name="clientName"  [(ngModel)]="client.name">
+										<input type="text" class="form-control" placeholder="Enter Name" name="clientName"  [(ngModel)]="client.name" ngModel maxlength="25">
                                         </div>
 										<div class="col">
 											<label class="text-dark"><b>Phone</b></label>
-											<input type="text" class="form-control" placeholder="Enter Number" name="clientPhone" [(ngModel)]="client.phone" >
+											<input type="text" class="form-control" placeholder="Enter Number" name="clientPhone" [(ngModel)]="client.phone" ngModel maxlength="10">
                                         </div>
 										</div>
                 </div>
 										<div class="form-group text-center">
 											<label class="text-Dark"><b>Amount</b></label>
 											<div class="row justify-content-center">
-												<input type="number" name="Amount" [(ngModel)]="trans.amount" class="form-control" placeholder="Enter Amount...."/>
+												<input type="number" name="Amount" [(ngModel)]="trans.amount" class="form-control" placeholder="Enter Amount...." ngModel maxlength=""/>
                         </div>
 												<button type="submit" class="btn btn-circle bg-primary text-white" (click)="debit()">Debit</button>
 												<button type="submit" class="btn btn-circle bg-primary text-white" (click)="credit()">Credit</button>
@@ -48,7 +48,7 @@
 											<div class="form-group text-center">
 												<label class="text-dark"><b>Description</b></label>
 												<div class="row justify-content-center">
-													<textarea [(ngModel)]="trans. description"  class="form-control" rows="3" placeholder="Optional"></textarea>
+													<textarea [(ngModel)]="trans. description"  class="form-control" rows="3" placeholder="Optional" ngModel maxlength="250"></textarea>
 												</div>
 												<button type="submit" class="btn btn-danger" (click)="cancel()" >Cancel</button>
 												<button type="submit" class="btn btn-primary" (click)="addTransaction()">Save</button>
