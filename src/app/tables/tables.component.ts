@@ -30,7 +30,7 @@ ngOnInit() {
 
    }
 
-   add(){
+ add(){
      this.ts.editTrans=null;
      this.router.navigate(["transaction"]);
    }
