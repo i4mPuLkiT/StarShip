@@ -133,7 +133,9 @@ form.user .form-control-user {
     font-size: 100px;
     text-align: center;
 }
-
+.text-ark {
+    color: #858796;
+}
 .text-center{
     color: #858796;
 }
