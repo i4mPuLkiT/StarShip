@@ -1,6 +1,6 @@
 <header>
   <nav class='navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark border-bottom box-shadow mb-3'>
-    <i class="fa fa-gg" aria-hidden="true"></i><a class="navbar-brand"(click)="homeclick()" *ngIf="us.loggedInUser.isAuthenticate">{{us.loggedInUser.name}}</a>
+    <i class="fa fa-2x fa-user-circle" aria-hidden="true"></i><a class="navbar-brand"(click)="homeclick()" *ngIf="us.loggedInUser.isAuthenticate">{{us.loggedInUser.name}}</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-label="Toggle navigation"
       [attr.aria-expanded]="isExpanded" (click)="toggle()">
       <span class="navbar-toggler-icon"></span>
