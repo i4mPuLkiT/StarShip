@@ -102,6 +102,7 @@ public transactions:Array<ModelNS.Transaction>=new Array<ModelNS.Transaction>();
       }
     } 
 }
+
 seedData()
 {
   let trans1:ModelNS.Transaction = new ModelNS.Transaction ();

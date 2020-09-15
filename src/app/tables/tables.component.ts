@@ -3,7 +3,8 @@ import { UserService } from '../user.service';
 import { TransactionService } from '../service/transaction.service';
 import { Router } from '@angular/router';
 import * as ModelNS from '../model/model';
-
+import { Observable } from 'rxjs/Observable';
+import 'rxjs/add/operator/map'
 
 @Component({
   selector: 'app-tables',
@@ -19,6 +20,7 @@ public ts:any;
  public transactions:Array<ModelNS.Transaction>=new Array<ModelNS.Transaction>();
 
 ngOnInit() {
+  
   }
   
    constructor(private us: UserService,private tService:TransactionService, private router: Router){
