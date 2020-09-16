@@ -5,6 +5,7 @@ import { Router } from '@angular/router';
 import * as ModelNS from '../model/model';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map'
+import { Http, Headers, RequestOptions, Response } from '@angular/http';
 
 @Component({
   selector: 'app-tables',
@@ -16,14 +17,16 @@ export class TablesComponent implements OnInit {
   public   values = '';
 public userService: any;
 public ts:any; 
-
+//  pager: any = {};
+//  pagedItems: any[];
  public transactions:Array<ModelNS.Transaction>=new Array<ModelNS.Transaction>();
 
 ngOnInit() {
   
   }
   
-   constructor(private us: UserService,private tService:TransactionService, private router: Router){
+   constructor(private us: UserService,private tService:TransactionService, private router: Router)
+   {
        this.userService = this.us;
        this.ts=this.tService;
        this.transactions = this.ts.transactions;
@@ -54,5 +57,15 @@ onKey(event: any) { // without type info
     this.search();
   }
 
+// setPage(page: number) {
+//         if (page < 1 || page > this.pager.totalPages) {
+//             return;
+//         }
 
+//         // get pager object from service
+//         this.pager = this.ts.getPager(this.transactions.length, page);
+
+//         // get current page of items
+//         this.pagedItems = this.ts.slice(this.pager.startIndex, this.pager.endIndex + 1);
+//     }
 }
