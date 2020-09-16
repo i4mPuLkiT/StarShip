@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,AfterViewInit, ViewChild } from '@angular/core';
 import { UserService } from '../user.service';
 import { TransactionService } from '../service/transaction.service';
 import { Router } from '@angular/router';
@@ -6,20 +6,30 @@ import * as ModelNS from '../model/model';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map'
 import { Http, Headers, RequestOptions, Response } from '@angular/http';
-
+import {MatPaginator} from '@angular/material/paginator';
+import {MatTableDataSource} from '@angular/material/table';
 @Component({
   selector: 'app-tables',
   templateUrl: './tables.component.html',
   styleUrls: ['./tables.component.css']
 })
-export class TablesComponent implements OnInit {
-  public searchKey:string;
+export class TablesComponent implements AfterViewInit {
+    public searchKey:string;
   public   values = '';
 public userService: any;
 public ts:any; 
-//  pager: any = {};
-//  pagedItems: any[];
  public transactions:Array<ModelNS.Transaction>=new Array<ModelNS.Transaction>();
+
+   displayedColumns: string[] = ['id', 'date', 'name', 'phone','amount','type','desciption','action'];
+ public dataSource = this.transactions;
+
+  @ViewChild(MatPaginator) paginator: MatPaginator;
+
+  ngAfterViewInit() {
+    //this.dataSource.paginator = this.paginator;
+  }
+
+
 
 ngOnInit() {
   
