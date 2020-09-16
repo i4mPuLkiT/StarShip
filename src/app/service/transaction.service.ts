@@ -7,17 +7,15 @@ import * as _ from "lodash";
 @Injectable()
 export class TransactionService {
     constructor(private cs:ClientService) {
-       this.seedData();
-       
+       this.seedData();      
      }
+
 public editTrans:ModelNS.Transaction;
 public transactions:Array<ModelNS.Transaction>=new Array<ModelNS.Transaction>();
 
 
   public newTransaction(trans:ModelNS.Transaction){
     this.editTrans=null;
-    //alert(Math.max(...this.transactions.map(o => o.id), 1));
-    // trans.id=this.transactions.max(i=>i.id) +1;
     //TODO = optimization required
     if(this.transactions.length>0)
     {
@@ -30,6 +28,32 @@ public transactions:Array<ModelNS.Transaction>=new Array<ModelNS.Transaction>();
 
     this.transactions.push(trans);
   }
+  
+ edit(trans:ModelNS.Transaction)
+  {
+    this.editTrans=trans;
+  }
+  editTransaction(trans:ModelNS.Transaction){
+    if(this.transactions.length>0)
+    {
+      //TODO = optimization required
+         this.transactions.find(f=>f.id==trans.id).amount=trans.amount;
+         this.transactions.find(f=>f.id==trans.id).type=trans.type;
+         this.transactions.find(f=>f.id==trans.id).description=trans.description;
+    } 
+}
+ deleteTransaction(trans:ModelNS.Transaction){
+    if(this.transactions.length>0)
+    {
+      //TODO = optimization required
+      for (var i in this.transactions) {
+      if (this.transactions[i].id == trans.id) {
+        this.transactions.splice(Number(i),1);
+        break; //Stop this loop, we found it!
+     }
+      }
+    } 
+}
 
   get getTotalDebit():number
   {
@@ -77,31 +101,7 @@ public transactions:Array<ModelNS.Transaction>=new Array<ModelNS.Transaction>();
     }
   };
 
-  edit(trans:ModelNS.Transaction)
-  {
-    this.editTrans=trans;
-  }
-  editTransaction(trans:ModelNS.Transaction){
-    if(this.transactions.length>0)
-    {
-      //TODO = optimization required
-         this.transactions.find(f=>f.id==trans.id).amount=trans.amount;
-         this.transactions.find(f=>f.id==trans.id).type=trans.type;
-         this.transactions.find(f=>f.id==trans.id).description=trans.description;
-    } 
-}
- deleteTransaction(trans:ModelNS.Transaction){
-    if(this.transactions.length>0)
-    {
-      //TODO = optimization required
-      for (var i in this.transactions) {
-      if (this.transactions[i].id == trans.id) {
-        this.transactions.splice(Number(i),1);
-        break; //Stop this loop, we found it!
-     }
-      }
-    } 
-}
+ 
 // getPager(totalItems: number, currentPage: number = 1, pageSize: number = 10)
 // {
 //   let totalPages = Math.ceil(totalItems / pageSize);
